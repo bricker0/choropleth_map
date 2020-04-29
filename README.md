@@ -7,7 +7,7 @@ Choropleth maps commonly are used by national statistic agencies or other author
 
 Choropleths are common in popular media because they are easy to make, and general audiences are relatively more familiar with them. This improves consistency in their interpretation. However, choropleth maps have several limitations requiring unique design solutions. 
 
-They suffer from the modifiable areal unit problem (MAUP) meaning the map looks different based on what area data are aggregated. Choropleth maps arguably suffer from MAUP more so than other thematic maps because the colour symbolization is applied to the entire polygon itself rather than using additional symbols atop or across the polygon (as with proportional symbol, dot density and isoline maps). This is a big reason why absolute frequencies must be normalized into relative attributes on choropleth maps to ensure comparability across enumeration units of different size and shape. For example, if you have seen any COVID-19 maps with total values of cases for each country – this is misleading because population and land area vary dramatically across the globe and across a single country. Most SDG indicators are rates – meaning they have been normalized, so this makes them easy to use to make choropleth maps. Relatedly, choropleth maps also require an equal-area projection to preserve the relative amounts of colours across the map. These are some ideas and rules to be aware of as you make your choropleth map.
+They suffer from the modifiable areal unit problem (MAUP) meaning the map looks different based on what area data are aggregated. <a href="https://uni-utrecht.maps.arcgis.com/apps/StorytellingSwipe/index.html?appid=7ce210f065214b55b4a9c458cdd8ff41">Read more and see an example of the MAUP here</a>. Choropleth maps arguably suffer from MAUP more so than other thematic maps because the colour symbolization is applied to the entire polygon itself rather than using additional symbols atop or across the polygon (as with proportional symbol, dot density and isoline maps). This is a big reason why absolute frequencies must be normalized into relative attributes on choropleth maps to ensure comparability across enumeration units of different size and shape. For example, if you have seen any COVID-19 maps with total values of cases for each country – this is misleading because population and land area vary dramatically across the globe and across a single country. Most SDG indicators are rates – meaning they have been normalized, so this makes them easy to use to make choropleth maps. Relatedly, choropleth maps also require an equal-area projection to preserve the relative amounts of colours across the map. These are some ideas and rules to be aware of as you make your choropleth map.
 
 # The United Nations Sustainable Development Goals (SDGs)
 
@@ -97,14 +97,21 @@ So far we have completed the following:
 - [X] Create a directory on you local machine to keep all of these files
 - [X] Find and download SDG data
 - [X] Clean the data in Excel
+We still need to: 
+- [ ] Open data in QGIS and join with CSV with SHP files
+- [ ] Categorize the data to make the map 
+- [ ] Export as a JPG for a static map
+- [ ] Put your map online to make an interactive map using Esri Online
+
+
+# About QGIS
+
+QGIS is relatively easy but I will not go over every detail here. If you find my directions difficult to follow, I recommend reading additional resources on your own. <a href="https://docs.qgis.org/2.2/en/docs/gentle_gis_introduction/">Here is a great tutorial about QGIS starting wtih navigating the interface</a>. There are even resources available in Dutch. 
 
 # Download the shapefile and open it QGIS
 
 If you have not done so already, download the shapefile I provide for you <a href="https://github.com/bricker0/choropleth_map/tree/master/data/global_boundaries_50">here</a>. Save them locally on your computer in  a place you will remember. 
 
-# About QGIS
-
-QGIS is realitvely easy but I will not go over every detail here. If you find my directions difficult to follow, I recommend reading additional resources on your own. <a href="https://docs.qgis.org/2.2/en/docs/gentle_gis_introduction/">Here is a great tutorial about QGIS starting wtih navigating the interface</a>. There are even resources available in Dutch. 
 
 #Open QGIS 
 
@@ -112,6 +119,9 @@ Start a new project - click on the icon in the top left that looks like a clean 
 ![Image of New QGIS document](https://github.com/bricker0/choropleth_map/blob/master/images/Picture2.png)
 
 If you would like to read more about the basic of QGIS - there are lots of resources online. 
+
+Here is a tutorial about how to add data to your project. 
+
 
 <a href="https://www.qgistutorials.com/en/docs/3/importing_spreadsheets_csv.html">Tutorial about how to import and open a CSV file in QGIS</a>.
 
