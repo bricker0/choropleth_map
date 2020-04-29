@@ -113,15 +113,17 @@ QGIS is relatively easy but I will not go over every detail here. If you find my
 If you have not done so already, download the shapefile I provide for you <a href="https://github.com/bricker0/choropleth_map/tree/master/data/global_boundaries_50">here</a>. Save them locally on your computer in  a place you will remember. 
 
 
-#Open QGIS 
+# Open QGIS 
 
 Start a new project - click on the icon in the top left that looks like a clean sheet of paper. It should look like this (see new project icon circled in red). 
 ![Image of New QGIS document](https://github.com/bricker0/choropleth_map/blob/master/images/Picture2.png)
 
 If you would like to read more about the basic of QGIS - there are lots of resources online. 
 
-Here is a tutorial about how to add data to your project. 
+First add data to your project. Open the file called global_boundaries_50 and add the shapefile called BNDA_CTY.shp
 
+It should look like this (see new project icon circled in red). 
+![Image of New QGIS document](https://github.com/bricker0/choropleth_map/blob/master/images/Picture3.png)
 
 <a href="https://www.qgistutorials.com/en/docs/3/importing_spreadsheets_csv.html">Tutorial about how to import and open a CSV file in QGIS</a>.
 
