@@ -53,4 +53,4 @@ Clean the data in Excel (or Google Sheets)
 
 Delete all of the data except what you will use in your map. Open the data in Excel. First, let’s see what is included in the dataset so we can think about what can be mapped. Every dataset will be formatted a bit different. This is because different agencies within the UN are responsible for collecting and curating each indicator dataset. You can read more about each individual indicator data curation practice in its metadata (metadata are data about data).  
 
-![Image of excelsheet](https://bricker0.github.com/choropleth_map/images/Picture1.png)
+![Image of excelsheet](https://github.com/bricker0/choropleth_map/blob/master/images/Picture1.png)
