@@ -9,11 +9,11 @@ Choropleths are common in popular media because they are easy to make, and gener
 
 They suffer from the modifiable areal unit problem (MAUP) meaning the map looks different based on what area data are aggregated. Choropleth maps arguably suffer from MAUP more so than other thematic maps because the colour symbolization is applied to the entire polygon itself rather than using additional symbols atop or across the polygon (as with proportional symbol, dot density and isoline maps). This is a big reason why absolute frequencies must be normalized into relative attributes on choropleth maps to ensure comparability across enumeration units of different size and shape. For example, if you have seen any COVID-19 maps with total values of cases for each country – this is misleading because population and land area vary dramatically across the globe and across a single country. Most SDG indicators are rates – meaning they have been normalized, so this makes them easy to use to make choropleth maps. Relatedly, choropleth maps also require an equal-area projection to preserve the relative amounts of colours across the map. These are some ideas and rules to be aware of as you make your choropleth map.
 
-#Getting started
+# Getting started
 
-##Software required:
+## Software required:
 
-Open Source desktop GIS called<a href= "https://qgis.org/en/site/">QGIS</a>, Excel (or Google Sheets), Esri Online (if you choose to do this step - my students have access to Esri online!) 
+Open Source desktop GIS called <a href= "https://qgis.org/en/site/">QGIS</a>, Excel (or Google Sheets), Esri Online (if you choose to do this step - my students have access to Esri online!) 
 
 Steps to take
 
