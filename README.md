@@ -51,17 +51,19 @@ First read through all of the different indicators for each of the Goals. Find S
 
 Read the SDG indicator list as a PDF here https://unstats.un.org/sdgs/indicators/indicators-list/
 
+Pick two (or 3 if you are ambitious) datasets to compare for this assignment. Download and review each before you go further in this assignment. What can you compare? Do they have enough data for the same year? You do not want to compare data from one idicator for the year 1990 and the other 2010. See what you can compare before you do the rest of this work. 
+
 Search the complete list, including metadata. When you have decided on a dataset (make sure it is normalized – a rate or  % of the population or % of total landmass for example) to map Download the official data here 
 https://unstats.un.org/sdgs/indicators/database/
 
 These data will need to be joined to a shape file .shp file to be opened in QGIS –shape files are commonly zipped files that contain attribute information or databases tied to geometry, the political boundaries of the countries. 
 
-Note: When you download data here from UN STATS– sometimes you will also get the regional data – these will need to be deleted later. The shapefile I provide for you does not include regional political boundaries so these rows will cause problems during the join process.
+Note: When you download data here from UN STATS– sometimes you will also get the regional data – these will need to be deleted later. The shapefile I provide for you does not include regional political boundaries so these rows will cause problems during the join process. For example, SDG indicator 1.1.1 "Southern Africa" and several other regions are included. For this exercise we only want country names. The region rows need to be deleted. The shapefile does not have any shapes to join these regions to in QGIS which will cause trouble later. In this dataset, each year has a different row instead of columns with different years. After I deleted the regions, I orgnaized all the data by date and deleted the dates I don't want. For my example I will be comparing poverty rate and deaths from traffic in the year 2000 and 2016.
 
-Some (but not all) of the indicators can be downloaded <a href="https://unstats-undesa.opendata.arcgis.com/">here and already in the shp format</a>, if you download data here you will not need to clean your data in Excel. However these data will not have political boundaries - these data are point data represented at the centroid of the country. The United Nations does not share political boundary data as political boundaries are a very sensitive subject. The data shared in this tutorial does not reflect the UN opinion on any boundary disputes. 
+For these reasons, will download indicator 1.1.1 <a href="https://unstats-undesa.opendata.arcgis.com/">here since it is already in the shp format</a>, and if you download data here you will not need to clean your data in Excel. Some (but not all) of the indicators can be downloaded here as Shapefiles. I recommend searching here first. However these data will not have political boundaries - these data are point data represented at the centroid of the country. The United Nations does not share political boundary data as political boundaries are a very sensitive subject. The data shared in this tutorial does not reflect the UN opinion on any boundary disputes. 
 
 
-For this example I picked…
+For this example I first picked (warning - each group will have to do this twice)…
 
 ## SDG #6 Ensure healthy lives and promote well-being for all at all ages
 
@@ -84,10 +86,18 @@ In this dataset, I notice there are different sheets of data, so that means the 
 
 After you have decided what to map based on what data are available, you may delete everything you don’t need. This is called cleaning the data. We delete everything else because it will slow down the computer processing, it will make it harder to find the data we do want to include in our map, it just makes everything faster and easier down the line. 
 
-Things I will delete. The columns stating the Goal and the Target, keep the indicator row (which includes the Goal number and target in it anyway). I am also deleting the SeriesCode, the GeoAreaCode, Nature, Reporting. I am definitely NOT deleting the country name – called the GeoAreaName because I will use that to join these data with the map data. I am not deleting the Series Description because I might need that in the interactive map (we will make in the final step), or to generate a legend, or simply to remember what the data represent. For the same reason I am not deleting Units, also I don’t want to forget the units these data are in for future reference. 
+Things I will delete. The columns stating the Goal and the Target, keep the indicator row (which includes the Goal number and target in it anyway). ALWAYS KEEP ISO3 code - whenever possible use this to join your data with the country file in QGIS. 
+
+I am also deleting the SeriesCode, the GeoAreaCode, Nature, Reporting. I am definitely NOT deleting the country name – called the GeoAreaName because I will use that to join these data with the map data. I am not deleting the Series Description because I might need that in the interactive map (we will make in the final step), or to generate a legend, or simply to remember what the data represent. For the same reason I am not deleting Units, also I don’t want to forget the units these data are in for future reference. 
 
 You can see my <a href="https://github.com/bricker0/choropleth_map/blob/master/data/Traffic_Death_Rate.xlsx">original dataset here </a>
 You can see my lighter, <a href="https://github.com/bricker0/choropleth_map/blob/master/data/Min_Traffic_Death_Rate.xlsx">cleaner dataset here</a>.
+
+## ** Perks of data cleaning - You are the canary in the Coal Mine while critical thinking
+
+When you critically think about the data, when you are going through it cleaning it, you will see things that most people don't. Think about how these data were collected in each country. Who reported it to who to get to the UN? In each of these countries. What data for which country is missing? Why do you think that is? What do you think about this data that you are going through? Are there more appropriate data to be collected to reach the SDG you are studying? 
+
+## now back to data cleaning 
 
 Finally, I will now save as a comma-separated values file CSV file. This will make life easier later. I do this in Excel by clicking File-->Save As-->Min_Traffic_Death_Rate.csv I had to use the dropdown to change the file format. Remeber what you save your file names and where you save them in case you need them later. In theory - you will only need your CSV now.  
 
