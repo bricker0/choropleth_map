@@ -1,5 +1,5 @@
 # choropleth_map
-In this tutorial you will learn how to make a choropleth map using SDG indicator data and QGIS. 
+In this tutorial you will learn how to make a choropleth map using SDG indicator data and QGIS. This presentation was developed for students in the <a href="https://www.uu.nl/bachelors/en/global-sustainability-science">Global Sustainability Science Bachelors at Utrecht University.</a> However, everyone is welcome to follow along - until the point where I introduce ArcGIS online. 
 
 A choropleth map is a thematic map that uses colour to represent a specific value and then fill a geographic area (in this case countries). For example, a map of the world where each country is coloured based on the % of people living under the poverty line – which is associated with SDG 1 (See figure X). Choropleth maps represent quantitative, enumerated and normalized data (meaning data that is based on a specific scale) and rely on the visual variable colour value (or shade or saturation of a single colour) to create an inherent order from light-to-dark colours or from dark-to-light colours. Choropleth maps may also use colour hue (specific shade of a colour) and colour saturation in multi-coloured schemes and all diverging schemes. 
 
@@ -60,10 +60,11 @@ These data will need to be joined to a shape file .shp file names "world.shp" th
 
 Note: When you download data here from UN STATS– sometimes you will also get the regional data – these will need to be deleted later. The shapefile I provide for you does not include regional political boundaries so these rows will cause problems during the join process. For example, SDG indicator 1.1.1 "Southern Africa" and several other regions are included. For this exercise we only want country names and ISO3 codes (not all indicators have this). The region rows need to be deleted. The shapefile I provide you with here does not have any region names to join these regions to in QGIS which will cause trouble later. In this dataset, each year has a different row instead of columns with different years. After I deleted the regions, I orgnaized all the data by date and deleted the dates I don't want. For my example I will be comparing poverty rate and deaths from traffic in the year 2000 and 2016.
 
-You may also download indicator data <a href="https://unstats-undesa.opendata.arcgis.com/">here since it is already in the shp format</a>, and if you download data here you will not need to clean your data in Excel. Some (but not all) of the indicators can be downloaded here as Shapefiles. Note - the lat long values are country centroids, no political boundaries can be downloaded from this source. You will still need to join this file to the file I provide you here. The United Nations does not share political boundary data as political boundaries are a very sensitive subject. The data shared in this tutorial does not reflect the UN opinion on any boundary disputes. 
+You may also download indicator data <a href="https://unstats-undesa.opendata.arcgis.com/">here since it is already in the shp format</a>, and if you download data here you will not need to clean your data in Excel. Some (but not all) of the indicators can be downloaded here as Shapefiles. Note - the lat long values are country centroids, no political boundaries can be downloaded from this source. You will still need to join this file to the file I provide you here. The United Nations does not share political boundary data as political boundaries are a very sensitive subject. The data shared in this tutorial does not reflect the UN opinion on any boundary disputes. Point data look like this. (see new project icon circled in red). 
+![Image of New QGIS document](https://github.com/bricker0/choropleth_map/blob/master/images/point.png)
 
 
-For this example I first picked (warning - each group will have to do this twice)…
+For this example I first picked indicator 3.6.1 and  (remember - each group will have to do pick two datasets. Meaning each group will go through this with their own data. I will go through this twice)…
 
 ## SDG #6 Ensure healthy lives and promote well-being for all at all ages
 
@@ -130,13 +131,28 @@ Start a new project - click on the icon in the top left that looks like a clean 
 
 If you would like to read more about the basic of QGIS - there are lots of resources online. 
 
-First add data to your project. Open the file called global_boundaries_50 and add the shapefile called BNDA_CTY.shp
+First add data to your project. Open the file called "world" and specifically add the shapefile called world.shp
 
 It should look like this (see new project icon circled in red). 
 ![Image of New QGIS document](https://github.com/bricker0/choropleth_map/blob/master/images/Picture3.png)
 
 <a href="https://www.qgistutorials.com/en/docs/3/importing_spreadsheets_csv.html">Tutorial about how to import and open a CSV file in QGIS</a>.
 
+Next, add your indicator CSV file. Follow the same directions you did before but this time select the "Delimited Text" option rather than Vector like you did in the last step. Navigate to your cleaned indicator dataset and click add. Or, if you downloaded a shapefile with the centroids, select vector again since it is a vector file. 
+
+You should now have two different layers or files loaded, their names should be seen in the Table of Contents (TOC) pane. Let's open the attributes of both files and have a look around to find out what the two have in common so that they can then be joined. 
+
+For me – it is ROMNAM in the World file and GeoAreaName in my indicator dataset. Several of the indicators have a ISO3 code - this is the best one to use if it is available. 
+
+Join the data. In the TOC right click on the world layer and select properties, then select join. Identify the attributes that match for you to join the two files. 
+
+In the next window click the green plus sign in the bottom left corner. Use the dropdown menus to identify the file and attribute field to join. (later if you want to remove the join you created – you can always push the red subtract symbol). 
+
+Also make sure you check the box that says “Custom Field Name Prefix” and then name is something short – each column you join will get this prefix. For example for SDG 1.1.1 I give those columns the prefix pov because it represents poverty rates.
+
+*******I have too many fields – go back and only save the fields I want in the csv
+
+![Image of New QGIS document](https://github.com/bricker0/choropleth_map/blob/master/images/Picture4.png)
 
 
 
