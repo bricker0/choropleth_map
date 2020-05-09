@@ -70,7 +70,9 @@ For this example I first picked indicator 3.6.1 and  (remember - each group will
 
 TARGET 3.6  By 2020, halve the number of global deaths and injuries from road traffic accidents
 INDICATOR 3.6.1  Death rate due to road traffic injuries
-Death rate due to road traffic injuries (per 100,000 population) 
+Death rate due to road traffic injuries (per 100,000 population)
+
+and Indicator 1.1.1 
 
 I downloaded these data. I first need to explore the data then clean it. 
 
@@ -150,9 +152,49 @@ In the next window click the green plus sign in the bottom left corner. Use the 
 
 Also make sure you check the box that says “Custom Field Name Prefix” and then name is something short – each column you join will get this prefix. For example for SDG 1.1.1 I give those columns the prefix pov because it represents poverty rates.
 
-*******I have too many fields – go back and only save the fields I want in the csv
 
 ![Image of New QGIS document](https://github.com/bricker0/choropleth_map/blob/master/images/Picture4.png)
+
+*******In this step I notice I still have too many fields – go back and open your csv file in Excel again and only save the fields I want in the csv.
+
+Once you have joined the data, open the attribute table and make sure the data have been joined. 
+
+Then see which countries have null values or no data. This means either there is no data for those countries, or it means the join didn’t work. This is sometimes the case if country names do not match between the two sources. You might have to go back and do more data cleaning. In the case of my dataset that I picked; the usual suspects are missing – several small island states. 
+
+
+Great! If this worked, save this new shapefile that have the joined data. 
+
+Right click the world file in the TOC-->Export-->Save Feature As-->Then save as a shapefile. Here you will notice you can see the type of field each attribute is, string (words) int (numbers). Note: make sure your joined data field are integers or real numbers, otherwise you will not be able to make a choropleth map with them. If they are, you are fine and move on to the next section. If they are not...let's fix that really quick. If the type stays string, QGIS will not let you create a choropleth map with that attribute field. 
+
+To fix this, save as a KML file instead of SHP. 
+
+Open the KML file using a text editor - I like to use Sublime Text Editor, you can use whatever you have on your comptuer. Open the file - In the Shema name - find the attribute name and change the type from "string" to "real". Once you have made this change, save and close the file. 
+![Image of New QGIS document](https://github.com/bricker0/choropleth_map/blob/master/images/Picture5.png) 
+
+Now open the new updated KLM file in QGIS and export as shapefile and keep going.
+
+
+# Make your choropelth map
+
+Right click the world shapefile that has your new attributes attached - whatever you named it. Then click properties-->Symbology
+
+In this new window in the top dropdown box change from single value to "graduated" in the next box labled value, select the attribute for which you wish to represent in your map. 
+
+Next select the legend format - how many decimals. I would say zero decimals. 
+
+Then select the type of classification you would like to apply to your data (remember this heaveily influences the message - you may come back and reclassify a few times until you get the picture you are trying to communicate). 
+
+Select the number of classes (no more than 5! People can not interpret more than 5).  You can change the color ramp if you would like. <a href="https://docs.qgis.org/2.8/en/docs/training_manual/vector_classification/classification.html">More about data classification in QGIS can be found here. </a>
+
+
+# Change the projection
+
+For now – keep ESG: 4326 WSG 84 – this is so you can use it online later. Even though we know Mercator is not optimal for global scale choropleth maps  
+You may get an error here – QGIS is buggy – switch a parameter and try again. If you want to create a print version of your map - change the projection to an equal area projection. <a href="
+https://gip-itc-universitytwente.github.io/globe-spinner/
+">Check out some options here </a>
+
+
 
 
 
