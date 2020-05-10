@@ -263,7 +263,9 @@ Now you will need to configure the "pop up." Make sure in the pop up there is on
 
 In my example, I also added a bar graph to show the difference in rates between the year 2000 and 2016.
 
-![ArcGIS Configure popup box(https://github.com/bricker0/choropleth_map/blob/master/images/Picture8.png) 
+![ArcGIS Configure popup box](https://github.com/bricker0/choropleth_map/blob/master/images/Picture8.png) 
+
+
 
 Add the second data set and style like you did above. Once you are happy with the style of your web map, we will move on to building our "Configure Web "
 
