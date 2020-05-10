@@ -1,7 +1,7 @@
 # choropleth_map
 In this tutorial you will learn how to make a choropleth map using SDG indicator data and QGIS. This presentation was developed for students in the <a href="https://www.uu.nl/bachelors/en/global-sustainability-science">Global Sustainability Science Bachelors at Utrecht University.</a> However, everyone is welcome to follow along - until the point where I introduce ArcGIS online. 
 
-Here I will walk you through out to make two choropleth maps that you can compare in a web application. Here is my example https://arcg.is/15HSDv
+Here I will walk you through out to make two choropleth maps that you can compare in a web application. Here is my example https://arcg.is/15HSDv and another example with same data. https://uni-utrecht.maps.arcgis.com/apps/Compare/index.html?appid=b0f4d8c7d2214f85b897668c3c414a3f
 
 A choropleth map is a thematic map that uses colour to represent a specific value and then fill a geographic area (in this case countries). For example, a map of the world where each country is coloured based on the % of people living under the poverty line – which is associated with SDG 1 (See figure X). Choropleth maps represent quantitative, enumerated and normalized data (meaning data that is based on a specific scale) and rely on the visual variable colour value (or shade or saturation of a single colour) to create an inherent order from light-to-dark colours or from dark-to-light colours. Choropleth maps may also use colour hue (specific shade of a colour) and colour saturation in multi-coloured schemes and all diverging schemes. 
 
@@ -286,7 +286,7 @@ Next select the map you just created. You may pick the vertical sliding bar or s
 
 Follow the directions provided. Continue to configure your map until you are happy with the app. Then make sure you toggle the sharing settings so that anyone on the web can see your work. 
 
-Here is what mine looks like https://arcg.is/15HSDv
+Here is what mine looks like https://arcg.is/15HSDv and this one https://uni-utrecht.maps.arcgis.com/apps/Compare/index.html?appid=b0f4d8c7d2214f85b897668c3c414a3f
 
 I can't wait to see yours!
 
