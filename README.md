@@ -188,6 +188,8 @@ Then select the type of classification you would like to apply to your data (rem
 
 Select the number of classes (no more than 5! People can not interpret more than 5).  You can change the color ramp if you would like. <a href="https://docs.qgis.org/2.8/en/docs/training_manual/vector_classification/classification.html">More about data classification in QGIS can be found here. </a>
 
+You may use this <a href="https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3">color selecting tool to help</a> you figure out the best color scheme for your map.
+
 
 # Change the projection
 
@@ -245,13 +247,16 @@ Now, click on the icon in the top left that looks like a piece of paper with wri
 
 ![ArcGIS Online Style](https://github.com/bricker0/choropleth_map/blob/master/images/Picture7.png) 
 
-When you click the icon that look like little shapes, on the layer you added,  this will give you options to style your map. 
+When you click the icon that look like little shapes, on the layer you added,  this will give you options to style your map. (You will likely do this step several times until you get it just right!)
 
 1. you need to select the attribute you wish to show on your map, the attribute I will be showing is called "Traff 2016" and represents deaths caused by traffic per 100,000 people. This is a rate.  
 
 2. Then I select "Counts and Amounts" which makes it a Choropleth map. 
 
 Click options to adjust the classification or data ranges that correspond to each color. You may also change the color ramp here as well. 
+
+
+Again, you may use this <a href="https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3">color selecting tool to help</a> you figure out the best color scheme for your map.
 
 Read more about <a href="https://doc.arcgis.com/en/arcgis-online/create-maps/styling-reference.htm#ESRI_SECTION1_E3130A70037C45ED996CB6646ABC7330">how to classify data in ArcGIS Online.</a>
 
@@ -267,8 +272,11 @@ In my example, I also added a bar graph to show the difference in rates between 
 
 You may see that in your popup box, a map reader might not understand your attribute name - so they may not know what the number represents. To change your attribute names and in turn update the field name in the pop up - <a href="https://doc.arcgis.com/en/arcgis-online/manage-data/describe-fields.htm#ESRI_SECTION1_665863484B9E4001A25FDDD9A030235A">follow these directions.</a>
 
-Add the second data set and style like you did above. Once you are happy with the style of your web map, we will move on to building our "Configure Web "
+Now, if you decide to map a swipe user interface to compare your data, you will need to make two seperate web maps. If you want to make a spy glass user interface to compare your data, you can have one map with two layers. Or if you don't know yet, you can create 3 maps. 1. with both data sets. 2. with one data set 3. with the other dataset. Then you can decide later if you want a swipe or spyglass. Repeat the steps above to make these maps. 
 
+Once you are happy with the style of your web map, we will move on to building our "Configure Web"
+
+# Configure Web App to compare indicator data
 
 Navigate to your "Content" page. Then click the button in the top left that says "+Create" and then select "Configurable Apps" then in the left menu of the new window click "Compare Maps/Layers" and then click the option "Story Map Swipe and Spyglass". Then click "Create a web app" and fill in all the parameters in the text window. Then click "Done". 
 
