@@ -1,6 +1,8 @@
 # choropleth_map
 In this tutorial you will learn how to make a choropleth map using SDG indicator data and QGIS. This presentation was developed for students in the <a href="https://www.uu.nl/bachelors/en/global-sustainability-science">Global Sustainability Science Bachelors at Utrecht University.</a> However, everyone is welcome to follow along - until the point where I introduce ArcGIS online. 
 
+Here I will walk you through out to make two choropleth maps that you can compare in a web application. Here is my example https://arcg.is/15HSDv
+
 A choropleth map is a thematic map that uses colour to represent a specific value and then fill a geographic area (in this case countries). For example, a map of the world where each country is coloured based on the % of people living under the poverty line – which is associated with SDG 1 (See figure X). Choropleth maps represent quantitative, enumerated and normalized data (meaning data that is based on a specific scale) and rely on the visual variable colour value (or shade or saturation of a single colour) to create an inherent order from light-to-dark colours or from dark-to-light colours. Choropleth maps may also use colour hue (specific shade of a colour) and colour saturation in multi-coloured schemes and all diverging schemes. 
 
 Choropleth maps commonly are used by national statistic agencies or other authoritative bodies that numbered data within sets of political boundaries. Choropleth is often the default thematic mapping technique for the SDG indicators. It is important to remember that these maps evoke a visual metaphor of continuous (it happens everywhere) and abrupt (it stops at the border) phenomena and, therefore, work best for mapping governmental activities, policies and regulations fixed to political jurisdictions. You can read more about cartography and choropleth maps and other thematic map types in this paper <a href="https://www.mdpi.com/2220-9964/7/12/482/pdf">Challenges of mapping sustainable development goals indicators data</a>.
@@ -281,6 +283,12 @@ Once you are happy with the style of your web map, we will move on to building o
 Navigate to your "Content" page. Then click the button in the top left that says "+Create" and then select "Configurable Apps" then in the left menu of the new window click "Compare Maps/Layers" and then click the option "Story Map Swipe and Spyglass". Then click "Create a web app" and fill in all the parameters in the text window. Then click "Done". 
 
 Next select the map you just created. You may pick the vertical sliding bar or spyglass configuration. 
+
+Follow the directions provided. Continue to configure your map until you are happy with the app. Then make sure you toggle the sharing settings so that anyone on the web can see your work. 
+
+Here is what mine looks like https://arcg.is/15HSDv
+
+I can't wait to see yours!
 
 
 
