@@ -265,7 +265,7 @@ In my example, I also added a bar graph to show the difference in rates between 
 
 ![ArcGIS Configure popup box](https://github.com/bricker0/choropleth_map/blob/master/images/Picture8.png) 
 
-
+You may see that in your popup box, a map reader might not understand your attribute name - so they may not know what the number represents. To change your attribute names and in turn update the field name in the pop up - <a href="https://doc.arcgis.com/en/arcgis-online/manage-data/describe-fields.htm#ESRI_SECTION1_665863484B9E4001A25FDDD9A030235A">follow these directions.</a>
 
 Add the second data set and style like you did above. Once you are happy with the style of your web map, we will move on to building our "Configure Web "
 
