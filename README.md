@@ -189,10 +189,85 @@ Select the number of classes (no more than 5! People can not interpret more than
 
 # Change the projection
 
-For now – keep ESG: 4326 WSG 84 – this is so you can use it online later. Even though we know Mercator is not optimal for global scale choropleth maps  
+For now – keep EPSG: 4326 WSG 84 – this is so you can use it online later. Even though we know Mercator is not optimal for global scale choropleth maps  
 You may get an error here – QGIS is buggy – switch a parameter and try again. If you want to create a print version of your map - change the projection to an equal area projection. <a href="
 https://gip-itc-universitytwente.github.io/globe-spinner/
 ">Check out some options here </a>
+
+# Print your map
+
+Once you are happy with your map, you can print it. You can now generate a static map and export as a PDF.  Make sure to include a legend!! <a href="https://docs.qgis.org/3.4/en/docs/training_manual/map_composer/map_composer.html">Read about how to print your map here.</a>
+
+
+
+# Make your ONLINE map - only for UU students
+
+Before we get started with making your online map, zip your shapefile. Zip all the documents with the name of your shapefile into one compressed file. Or, save it as a KML file. This will need to be uploaded online. 
+
+I will be showing you how to make a slider app using Esri online. Pro tip: If you have server space and would like to use a different API that is fine. You can host the map files on Esri online - generate a REST service to be used in a different mapping API.
+
+As a UU student, you have a free ESRI account. The ESRI liscence you have access to as a student is insanely expensive. We may as well enjoy it while you have it!
+
+#Esri Online Web App
+
+Here you will make an Esri online web app so that the online map user can slide between your two maps, or use a "spy glass" to comepare maps or another interface you wish. 
+
+There are a few steps to this. 
+First, you have to add your content to Esri online. (with your online account you have a folder with all of your content)
+Second, you have to create a web map. This is where you style your map, pick which attribute values you want the end user to see when they click on the map, etc.
+
+Third, you pick the web app template you would like. 
+
+When you are done, in your content folder, you will see your file, your web map and your web app. It is important you name them appropriately so you can keep track of them. Also, you must make sure the sharing settings are set appropriately. You need to set them to anyone within your organization can see them (at least) or you can set them for everyone in the world to be able to see them (if you want to share on social media). 
+
+
+<a href="https://www.arcgis.com/sharing/rest/oauth2/authorize?client_id=arcgisonline&display=default&response_type=token&state=%7B%22useLandingPage%22%3Atrue%7D&expiration=20160&locale=en&redirect_uri=https%3A%2F%2Fwww.arcgis.com%2Fhome%2Faccountswitcher-callback.html&force_login=true&hideCancel=true&showSignupOption=true&canHandleCrossOrgSignIn=true&signuptype=esri">Click here to sign into Esri online</a>. Sign into the Enterprise account by first typing uni-utrecht. Then use your solis id to log in. 
+
+Once you are logged in, in the top menu bar, click "Content". On the next page click "Add Item"-->click from your computer. Navigate to the zipped shape file you created. Make sure you select the matching file format in the contents dropdown box. Make sure Publish this file as a hosted layer is toggled. Add the tag SDG and the SDG indicator value and any other key words youf find appropriate. 
+
+Once the file is uploaded, it will take you to a page about the dataset you have uploaded. Here you can manage the settings. Click "Sharing" and then select either Organization or Everyone(otherwise only you will see it). Then click save. 
+
+While you do not need this now - you will also see on this page there are conversion tools. 
+
+Do the same for your other datasets.
+
+Next click "Open in Map Viewer". At the time of writing (May 2020) You will see a stable version and a beta version of this product. You can pick either one, although it is always safer to not pick the beta version.) If you decide to use the beta viewer - it is self explainitory how to use it. This (beta or normal) will open your shapefile in Esri online map viewer. Your data will not be styled with the style you worked so hard on in QGIS. You will have to do it again here.
+
+If you do not click open in map viewer from the data page for your content - you can also open a new "My Map" and open your here. In a new map window, click the Add Button. Since you have already uploaded your file, you can click Search for layers, the first layer should be the data you just uploaded. Add it to your map by click the + symbol. Again, it will not be styled, we will do that now. 
+
+I will give you the basics. <a href=""https://doc.arcgis.com/en/arcgis-online/create-maps/change-style.htm> More information about changing the style of your map can be found here.</a>
+
+
+
+Now, click on the icon in the top left that looks like a piece of paper with writing on it. This will show you what layers you have loaded in your map and give you the opportunity to do analysis or style the data here.
+
+![ArcGIS Online Style](https://github.com/bricker0/choropleth_map/blob/master/images/Picture6.png) 
+
+When you click the icon that look like little shapes, on the layer you added,  this will give you options to style your map. 
+
+1. you need to select the attribute you wish to show on your map, the attribute I will be showing is called "Traff 2016" and represents deaths caused by traffic per 100,000 people. This is a rate.  
+
+2. Then I select "Counts and Amounts" which makes it a Choropleth map. 
+
+Click options to adjust the classification or data ranges that correspond to each color. You may also change the color ramp here as well. 
+
+Read more about <a href="https://doc.arcgis.com/en/arcgis-online/create-maps/styling-reference.htm#ESRI_SECTION1_E3130A70037C45ED996CB6646ABC7330">how to classify data in ArcGIS Online.</a>
+
+3. Click done. 
+
+Then make sure you click "Save" in the top of the map and save as and name your map something you will not forget. (See figure above). 
+
+Now you will need to configure the "pop up." Make sure in the pop up there is only relevant information for your target audience. In my case, it is not all of the attribute information but only country name, which SDG indicator and how many accidents, and that the number is a rate.  <a href="https://doc.arcgis.com/en/arcgis-online/create-maps/configure-pop-ups.htm">More details about how to configure the pop up box can be found here</a>.
+
+
+
+
+
+
+
+
+
+
 
 
 
