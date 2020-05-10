@@ -51,7 +51,9 @@ First read through all of the different indicators for each of the Goals. Find S
 
 Read the SDG indicator list as a PDF here https://unstats.un.org/sdgs/indicators/indicators-list/
 
-Pick two (or 3 if you are ambitious) datasets to compare for this assignment. Download and review each before you go further in this assignment. What can you compare? Do they have enough data for the same year? You do not want to compare data from one idicator for the year 1990 and the other indicator with data from 2010. See what you can compare before you do the rest of this work. 
+Pick two (or 3 if you are ambitious) datasets to compare for this assignment. Download and review each before you go further in this assignment. What can you compare? Do they have enough data for the same year? You do not want to compare data from one idicator for the year 1990 and the other indicator with data from 2010. See what you can compare before you do the rest of this work.
+
+Note: When I looked at my two datasets I noticed that the poverty indicator 1.1.1 is missing a lot of data in different years, the most complete is "latest year" This makes it difficult to compare years. I would recommend being strategic - you might have to clean/join data again. Bring in all years of data to keep your options open later.  
 
 Search the complete list, including metadata. When you have decided on a dataset (make sure it is normalized – a rate or  % of the population or % of total landmass for example) to map Download the official data here 
 https://unstats.un.org/sdgs/indicators/database/
@@ -241,7 +243,7 @@ I will give you the basics. <a href=""https://doc.arcgis.com/en/arcgis-online/cr
 
 Now, click on the icon in the top left that looks like a piece of paper with writing on it. This will show you what layers you have loaded in your map and give you the opportunity to do analysis or style the data here.
 
-![ArcGIS Online Style](https://github.com/bricker0/choropleth_map/blob/master/images/Picture6.png) 
+![ArcGIS Online Style](https://github.com/bricker0/choropleth_map/blob/master/images/Picture7.png) 
 
 When you click the icon that look like little shapes, on the layer you added,  this will give you options to style your map. 
 
@@ -258,6 +260,17 @@ Read more about <a href="https://doc.arcgis.com/en/arcgis-online/create-maps/sty
 Then make sure you click "Save" in the top of the map and save as and name your map something you will not forget. (See figure above). 
 
 Now you will need to configure the "pop up." Make sure in the pop up there is only relevant information for your target audience. In my case, it is not all of the attribute information but only country name, which SDG indicator and how many accidents, and that the number is a rate.  <a href="https://doc.arcgis.com/en/arcgis-online/create-maps/configure-pop-ups.htm">More details about how to configure the pop up box can be found here</a>.
+
+In my example, I also added a bar graph to show the difference in rates between the year 2000 and 2016.
+
+![ArcGIS Configure popup box(https://github.com/bricker0/choropleth_map/blob/master/images/Picture8.png) 
+
+Add the second data set and style like you did above. Once you are happy with the style of your web map, we will move on to building our "Configure Web "
+
+
+Navigate to your "Content" page. Then click the button in the top left that says "+Create" and then select "Configurable Apps" then in the left menu of the new window click "Compare Maps/Layers" and then click the option "Story Map Swipe and Spyglass". Then click "Create a web app" and fill in all the parameters in the text window. Then click "Done". 
+
+Next select the map you just created. You may pick the vertical sliding bar or spyglass configuration. 
 
 
 
