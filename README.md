@@ -1,7 +1,14 @@
 # choropleth_map
 In this tutorial you will learn how to make a choropleth map using SDG indicator data and QGIS. This presentation was developed for students in the <a href="https://www.uu.nl/bachelors/en/global-sustainability-science">Global Sustainability Science Bachelors at Utrecht University.</a> However, everyone is welcome to follow along - until the point where I introduce ArcGIS online. 
 
-Here I will walk you through out to make two choropleth maps that you can compare in a web application. Here is my example https://arcg.is/15HSDv and another example with same data. https://uni-utrecht.maps.arcgis.com/apps/Compare/index.html?appid=b0f4d8c7d2214f85b897668c3c414a3f
+Here I will walk you through out to make two choropleth maps that you can compare in a web application. 
+
+Here is an example of a printed map made using QGIS and explained here. 
+
+![Image of printed map](https://github.com/bricker0/choropleth_map/blob/master/images/demo1.png) 
+
+
+Here is my example using ArcGIS Online (this is not perfect!) https://arcg.is/15HSDv and another example with same data. https://uni-utrecht.maps.arcgis.com/apps/Compare/index.html?appid=b0f4d8c7d2214f85b897668c3c414a3f
 
 A choropleth map is a thematic map that uses colour to represent a specific value and then fill a geographic area (in this case countries). For example, a map of the world where each country is coloured based on the % of people living under the poverty line – which is associated with SDG 1 (See figure X). Choropleth maps represent quantitative, enumerated and normalized data (meaning data that is based on a specific scale) and rely on the visual variable colour value (or shade or saturation of a single colour) to create an inherent order from light-to-dark colours or from dark-to-light colours. Choropleth maps may also use colour hue (specific shade of a colour) and colour saturation in multi-coloured schemes and all diverging schemes. 
 
@@ -228,6 +235,17 @@ You may get an error here – QGIS is buggy – switch a parameter and try again
 # Print your map
 
 Once you are happy with your map, you can print it. You can now generate a static map and export as a PDF.  Make sure to include a legend!! <a href="https://docs.qgis.org/3.4/en/docs/training_manual/map_composer/map_composer.html">Read about how to print your map here.</a>
+
+In short, first center your map how you would like to see it printed. Then click Project-->New Print Layout
+
+In the next window click the small icon on the left that looks like a piece of paper with a small green plus and that when you hover over it, it says "Add new map to layout" then make the box as big as you would like the map to be printed in the frame (fill the frame!).
+
+Next, click the small icon that has 3 boxes (yellow, red, blue) and a small green plus that when you hover over it says "Add new legend to the layout" This will generate a legend. Change the labels using the window pane to the right. Make sure the labels will make sense to the map reader. Then add a title to your map. Think about posting this map on social media - will your friends be able to figure out what is going on? Are all data labeled in the legend along with data type ( what are the units of measure represented on your map? Is it a proportion of the population? rate? something else? this needs to be in the legend and maybe even the title!)
+
+Once you are happy with all of your labels, click the PDF icon and export the image. If you don't like it, keep working on it. I am happy with my labels, but I might reclassify my data. 
+
+
+![Image of printed map](https://github.com/bricker0/choropleth_map/blob/master/images/demo.png) 
 
 
 # Make your ONLINE map - only for UU students
