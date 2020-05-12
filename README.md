@@ -242,10 +242,12 @@ In the next window click the small icon on the left that looks like a piece of p
 
 Next, click the small icon that has 3 boxes (yellow, red, blue) and a small green plus that when you hover over it says "Add new legend to the layout" This will generate a legend. Change the labels using the window pane to the right. Make sure the labels will make sense to the map reader. Then add a title to your map. Think about posting this map on social media - will your friends be able to figure out what is going on? Are all data labeled in the legend along with data type ( what are the units of measure represented on your map? Is it a proportion of the population? rate? something else? this needs to be in the legend and maybe even the title!)
 
-Once you are happy with all of your labels, click the PDF icon and export the image. If you don't like it, keep working on it. I am happy with my labels, but I might reclassify my data. 
+Once you are happy with all of your labels, click the PDF icon and export the image. If you don't like it, keep working on it. I am happy with my labels, but I might reclassify my data. There are a number of other problems too. 1. in the legend a vew values are present in more than one class - 11 is in the middle two classes, same for 21. Make sure you fix this in your legend, reminder, go to properties -->symbology and double click the legend to change values.
 
 
 ![Image of printed map](https://github.com/bricker0/choropleth_map/blob/master/images/demo.png) 
+
+
 
 
 # Make your ONLINE map - only for UU students
