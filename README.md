@@ -60,9 +60,9 @@ Note: When I looked at my two datasets I noticed that the poverty indicator 1.1.
 Search the complete list, including metadata. When you have decided on a dataset (make sure it is normalized – a rate or  % of the population or % of total landmass for example) to map Download the official data here 
 https://unstats.un.org/sdgs/indicators/database/
 
-These data will need to be joined to a shape file .shp file names "world.shp" that is provided for you here. Shp files can be opened in QGIS –shape files are commonly zipped files that contain several files that need to remain in the same directory as they contain attribute information, metadata or databases. In this case the shape file provices the political boundaries of the countries. 
+These data will need to be joined to a shape file .shp file names "world.shp" that is provided for you here. You will need to <a href="https://github.com/bricker0/choropleth_map/blob/master/data/world.zip">download the zipped file</a> - not the shp file alone! Shp files can be opened in QGIS –shape files are commonly zipped files that contain several files that need to remain in the same directory as they contain attribute information, metadata or databases. In this case the shape file provices the political boundaries of the countries. 
 
-Note: When you download data here from UN STATS– sometimes you will also get the regional data – these will need to be deleted later. The shapefile I provide for you does not include regional political boundaries so these rows will cause problems during the join process. For example, SDG indicator 1.1.1 "Southern Africa" and several other regions are included. For this exercise we only want country names and ISO3 codes (not all indicators have this). The region rows need to be deleted. The shapefile I provide you with here does not have any region names to join these regions to in QGIS which will cause trouble later. In this dataset, each year has a different row instead of columns with different years. After I deleted the regions, I orgnaized all the data by date and deleted the dates I don't want. For my example I will be comparing poverty rate and deaths from traffic in the year 2000 and 2016.
+Note: When you download data here from UN STATS– sometimes you will also get the regional data – these will need to be deleted later. The shapefile I provide for you does not include regional political boundaries so these rows will cause problems during the join process. For example, SDG indicator 1.1.1 "Southern Africa" and several other regions are included. For this exercise we only want country names and ISO3 codes (ISO3 is a uniform 3 letter code for each country - not all indicators have this). The region rows need to be deleted. The shapefile I provide you with here does not have any region names to join these regions to in QGIS which will cause trouble later. In this dataset, each year has a different row instead of columns with different years. After I deleted the regions, I orgnaized all the data by date and deleted the dates I don't want. For my example I will be comparing poverty rate and deaths from traffic in the year 2000 and 2016.
 
 You may also download indicator data <a href="https://unstats-undesa.opendata.arcgis.com/">here since it is already in the shp format</a>, and if you download data here you will not need to clean your data in Excel. Some (but not all) of the indicators can be downloaded here as Shapefiles. Note - the lat long values are country centroids, no political boundaries can be downloaded from this source. You will still need to join this file to the file I provide you here. The United Nations does not share political boundary data as political boundaries are a very sensitive subject. The data shared in this tutorial does not reflect the UN opinion on any boundary disputes. Point data look like this. (see new project icon circled in red). 
 ![Image of New QGIS document](https://github.com/bricker0/choropleth_map/blob/master/images/point.png)
@@ -106,7 +106,11 @@ When you critically think about the data, when you are going through it cleaning
 
 ## now back to data cleaning 
 
-Finally, I will now save as a comma-separated values file CSV file. This will make life easier later. I do this in Excel by clicking File-->Save As-->Min_Traffic_Death_Rate.csv I had to use the dropdown to change the file format. Remeber what you save your file names and where you save them in case you need them later. In theory - you will only need your CSV now.  
+Finally, I will now save as a comma-separated values file CSV file. This will make life easier later. I do this in Excel by clicking File-->Save As-->Min_Traffic_Death_Rate.csv I had to use the dropdown to change the file format. 
+
+Make sure to toggle "no geometry" otherwise you will get an error related to geometry dfeinition.
+
+Remeber what you save your file names and where you save them in case you need them later. In theory - you will only need your CSV now.  
 
 I will be using this<a href="https://github.com/bricker0/choropleth_map/blob/master/data/Min_Traffic_Death_Rate.csv">CSV dataset here</a>.
 
@@ -159,7 +163,7 @@ Also make sure you check the box that says “Custom Field Name Prefix” and th
 
 ![Image of New QGIS document](https://github.com/bricker0/choropleth_map/blob/master/images/Picture4.png)
 
-*******In this step I notice I still have too many fields – go back and open your csv file in Excel again and only save the fields I want in the csv.
+*******In this step I notice I still have more fields than I will use to generate or style my map – go back and open your csv file in Excel again and only save the fields I want in the csv. This step is optional. 
 
 Once you have joined the data, open the attribute table and make sure the data have been joined. 
 
@@ -168,7 +172,7 @@ Then see which countries have null values or no data. This means either there is
 
 Great! If this worked, save this new shapefile that have the joined data. 
 
-Right click the world file in the TOC-->Export-->Save Feature As-->Then save as a shapefile. Here you will notice you can see the type of field each attribute is, string (words) int (numbers). Note: make sure your joined data field are integers or real numbers, otherwise you will not be able to make a choropleth map with them. If they are, you are fine and move on to the next section. If they are not...let's fix that really quick. If the type stays string, QGIS will not let you create a choropleth map with that attribute field. 
+Right click the world file in the TOC-->Export-->Save Feature As-->Then save as a shapefile. Here you will notice you can see the type of field each attribute is, string (words) int (numbers). Note: make sure your joined data field are integers or real numbers (fload, int, double are all fine), otherwise you will not be able to make a choropleth map with them. If they are, you are fine and move on to the next section. If they are not...let's fix that really quick. If the type stays string, QGIS will not let you create a choropleth map with that attribute field. 
 
 To fix this, save as a KML file instead of SHP. 
 
@@ -180,30 +184,50 @@ Now open the new updated KLM file in QGIS and export as shapefile and keep going
 
 # Make your choropelth map
 
-Right click the world shapefile that has your new attributes attached - whatever you named it. Then click properties-->Symbology
+Use the properties window to change the following (letter relate to figure below)
 
-In this new window in the top dropdown box change from single value to "graduated" in the next box labled value, select the attribute for which you wish to represent in your map. 
+a. select attribute 
+b. color ramp
+c. number of decimal places
+d. type of classification 
+e. number of classes
+f. Change class values, labels, specific color swatches
 
-Next select the legend format - how many decimals. I would say zero decimals. 
+First, right click the world shapefile that has your new attributes attached - whatever you named it. Then click properties-->Symbology
 
-Then select the type of classification you would like to apply to your data (remember this heaveily influences the message - you may come back and reclassify a few times until you get the picture you are trying to communicate). 
+In this new window in the top dropdown box change from single value to "graduated" in the next box labled value, (a)select the attribute for which you wish to represent in your map. 
 
-Select the number of classes (no more than 5! People can not interpret more than 5).  You can change the color ramp if you would like. <a href="https://docs.qgis.org/2.8/en/docs/training_manual/vector_classification/classification.html">More about data classification in QGIS can be found here. </a>
+Next select the legend format - (b) color ramp - You may use this <a href="https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3">color selecting tool to help</a> you figure out the best color scheme for your map.
 
-You may use this <a href="https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3">color selecting tool to help</a> you figure out the best color scheme for your map.
+(c)how many decimals. I would say zero decimals. Decimal is labeled as "precision" number. It is a dropdown menu. 
+ 
 
+Then select the (d) type of  (remeber basic statistics - here is a <a href="https://www.axismaps.com/guide/data/data-classification/">great overview related to choropleth maps</a>) you would like to apply to your data (remember this heaveily influences the message - you may come back and reclassify a few times until you get the picture you are trying to communicate). 
+
+
+Select the (e) number of classes (no more than 5! People can not interpret more than 5).  Then click "Classify". 
+
+<a href="https://docs.qgis.org/2.8/en/docs/training_manual/vector_classification/classification.html">More about data classification in QGIS can be found here. </a>
+
+(f) You can double click the color swatches to change them, double click the class labels in the Legend to change them, and double click on the class values themselves to change them. 
+
+![Image of New QGIS Classifying Symbology](https://github.com/bricker0/choropleth_map/blob/master/images/Picture33.png) 
 
 # Change the projection
 
-For now – keep EPSG: 4326 WSG 84 – this is so you can use it online later. Even though we know Mercator is not optimal for global scale choropleth maps  
-You may get an error here – QGIS is buggy – switch a parameter and try again. If you want to create a print version of your map - change the projection to an equal area projection. <a href="
+For now – keep EPSG: 4326 WSG 84 – this is so you can use it online later -even though we know Mercator is *not* optimal for global scale choropleth maps. 
+
+For printing to PDF - change the projection to something like Mollewide or another equal area projection. <a href="
 https://gip-itc-universitytwente.github.io/globe-spinner/
-">Check out some options here </a>
+">Check out some options here. </a>
+
+![Change projection window](https://github.com/bricker0/choropleth_map/blob/master/images/Picture9.png) 
+
+You may get an error here – QGIS is buggy – switch a parameter and try again. 
 
 # Print your map
 
 Once you are happy with your map, you can print it. You can now generate a static map and export as a PDF.  Make sure to include a legend!! <a href="https://docs.qgis.org/3.4/en/docs/training_manual/map_composer/map_composer.html">Read about how to print your map here.</a>
-
 
 
 # Make your ONLINE map - only for UU students
