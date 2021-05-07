@@ -1,5 +1,5 @@
 # choropleth_map
-In this tutorial you will learn how to make a choropleth map using SDG indicator data and QGIS. This presentation was developed for students in the <a href="https://www.uu.nl/bachelors/en/global-sustainability-science">Global Sustainability Science Bachelors at Utrecht University.</a> However, everyone is welcome to follow along - until the point where I introduce ArcGIS online. I will walk you through out to find SDG indicator, join it to a country boundary shape file to then make two choropleth maps to be printed or/and that you can compare in a web application. 
+In this tutorial you will learn how to make a choropleth map using United Nations Sustainabile Development Goal (SDG) indicator data and QGIS. This presentation was developed for students in the <a href="https://www.uu.nl/bachelors/en/global-sustainability-science">Global Sustainability Science Bachelors at Utrecht University.</a> However, everyone is welcome to follow along - until the point where I introduce ArcGIS online. I will walk you through the process to find SDG indicator data, join it to a country boundary shape file to then make two choropleth maps to be printed or/and digital format so that you can compare the two in a web application. 
 
 Here is an example of the final printed map made using QGIS and explained in this tutorial. 
 
@@ -132,7 +132,13 @@ We still need to:
 
 # About QGIS
 
-QGIS is relatively easy but I will not go over every detail here. If you find my directions difficult to follow, I recommend reading additional resources on your own. <a href="https://docs.qgis.org/2.2/en/docs/gentle_gis_introduction/">Here is a great tutorial about QGIS starting wtih navigating the interface</a>. There are even resources available in Dutch. 
+QGIS is an open souce software. Meaning it is free to download and use, and free to modify the code. 
+
+QGIS is relatively easy to use but I will not go over every detail here. If you find my directions difficult to follow, I recommend reading additional resources on your own. <a href="https://docs.qgis.org/2.2/en/docs/gentle_gis_introduction/">Here is a great tutorial about QGIS starting with navigating the interface</a>. There are even resources available in Dutch. 
+
+The directions I provide are in English - so the first step might be to switch the language of the QGIS interface from Dutch to English. Here is a brief tutorial on how to do that. 
+
+<iframe width="720" height="530" src="https://video.uu.nl/permalink/v12619b44a56c4i15u9p/iframe/" allowfullscreen="allowfullscreen" allow="autoplay"></iframe>
 
 # Download the shapefile and open it QGIS
 
