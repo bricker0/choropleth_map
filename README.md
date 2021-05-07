@@ -136,9 +136,8 @@ QGIS is an open souce software. Meaning it is free to download and use, and free
 
 QGIS is relatively easy to use but I will not go over every detail here. If you find my directions difficult to follow, I recommend reading additional resources on your own. <a href="https://docs.qgis.org/2.2/en/docs/gentle_gis_introduction/">Here is a great tutorial about QGIS starting with navigating the interface</a>. There are even resources available in Dutch. 
 
-The directions I provide are in English - so the first step might be to switch the language of the QGIS interface from Dutch to English. Here is a brief tutorial on how to do that. 
-
-<iframe width="720" height="530" src="https://video.uu.nl/permalink/v12619b44a56c4i15u9p/iframe/" allowfullscreen="allowfullscreen" allow="autoplay"></iframe>
+The directions I provide are in English - so the first step might be to switch the language of the QGIS interface from Dutch to English.
+<a href="https://video.uu.nl/permalink/v12619b44a56c4i15u9p/iframe/" allowfullscreen="allowfullscreen" allow="autoplay">Here is a two minute video tutorial on how to change the language of the User Interface.</a>
 
 # Download the shapefile and open it QGIS
 
