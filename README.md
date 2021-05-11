@@ -1,6 +1,8 @@
 # choropleth_map
 In this tutorial you will learn how to make a choropleth map using United Nations Sustainabile Development Goal (SDG) indicator data and QGIS. This presentation was developed for students in the <a href="https://www.uu.nl/bachelors/en/global-sustainability-science">Global Sustainability Science Bachelors at Utrecht University.</a> However, everyone is welcome to follow along - until the point where I introduce ArcGIS online. I will walk you through the process to find SDG indicator data, join it to a country boundary shape file to then make two choropleth maps to be printed or/and digital format so that you can compare the two in a web application. 
 
+Complementary to this tutorial is the book <a href"https://www.un.org/geospatial/sites/www.un.org.geospatial/files/MappingforaSustainableWorld20210124.pdf"> UN publication: Mapping for a Sustainable World</a> which covers cartographic principles as they relate to mapping the SDGs. 
+
 Here is an example of the final printed map made using QGIS and explained in this tutorial. 
 
 ![Image of printed map](https://github.com/bricker0/choropleth_map/blob/master/images/demo1.png) 
