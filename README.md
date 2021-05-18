@@ -74,6 +74,10 @@ Read through all of the different indicators for each of the Goals. Find SDG ind
 
 Read the SDG indicator list as a PDF here https://unstats.un.org/sdgs/indicators/indicators-list/
 
+I recommend that you download indicator data <a href="https://unstats-undesa.opendata.arcgis.com/">here since it is already in the shp format</a>, and if you download data here you will not need to clean your data in Excel. Some (but not all) of the indicators can be downloaded here as Shapefiles. Note - the lat long values are country centroids, no political boundaries can be downloaded from this source. You will still need to join this file to the file I provide you here. The United Nations does not share political boundary data as political boundaries are a very sensitive subject. The data shared in this tutorial does not reflect the UN opinion on any boundary disputes. Point data look like this. (see new project icon circled in red). 
+![Image of New QGIS document](https://github.com/bricker0/choropleth_map/blob/master/images/point.png)
+
+
 Pick two (or 3 if you are ambitious) datasets to compare for this assignment. Download and review each before you go further in this assignment. What can you compare? Do they have enough data for the same year? You do not want to compare data from one indicator for the year 1990 and the other indicator with data from 2010. See what you can compare before you do the rest of this work.
 
 Here is a quick video to show you how to <a href="https://video.uu.nl/permalink/v1261a0b1eeb034kkvxu/"> search, download, and clean data in Excel. </a>
@@ -87,8 +91,6 @@ These data will need to be joined to a shape file .shp file names "world.shp" th
 
 Note: When you download data here from UN STATS– sometimes you will also get the regional data – these will need to be deleted later. The shapefile I provide for you does not include regional political boundaries so these rows will cause problems during the join process. For example, SDG indicator 1.1.1 "Southern Africa" and several other regions are included. For this exercise, we only want country names and ISO3 codes (ISO3 is a uniform 3 letter code for each country - not all indicators have this). The region rows need to be deleted. The shapefile I provide you with here does not have any region names to join these regions to in QGIS which will cause trouble later. In this dataset, each year has a different row instead of columns with different years. After I deleted the regions, I organized all the data by date and deleted the dates I don't want. For my example, I will be comparing the poverty rate and deaths from traffic in the year 2000 and 2016.
 
-You may also download indicator data <a href="https://unstats-undesa.opendata.arcgis.com/">here since it is already in the shp format</a>, and if you download data here you will not need to clean your data in Excel. Some (but not all) of the indicators can be downloaded here as Shapefiles. Note - the lat long values are country centroids, no political boundaries can be downloaded from this source. You will still need to join this file to the file I provide you here. The United Nations does not share political boundary data as political boundaries are a very sensitive subject. The data shared in this tutorial does not reflect the UN opinion on any boundary disputes. Point data look like this. (see new project icon circled in red). 
-![Image of New QGIS document](https://github.com/bricker0/choropleth_map/blob/master/images/point.png)
 
 
 For this example, I first picked indicator 3.6.1 and  (remember - each group will have to do pick two datasets. Meaning each group will go through this with their own data. I will go through this twice)…
