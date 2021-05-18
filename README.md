@@ -20,7 +20,6 @@ This presentation was developed for students in the <a href="https://www.uu.nl/b
 
 Here is my example using ArcGIS Online Web App to compare two different SDG indicator datasets https://arcg.is/15HSDv 
 
-
 Choropleth maps commonly are used by national statistic agencies or other authoritative bodies that numbered data within sets of political boundaries. Choropleth is often the default thematic technique for the SDG indicators. It is important to remember that these maps evoke a visual metaphor of continuous (it happens everywhere) and abrupt (it stops at the border) phenomena and, therefore, work best for mapping governmental activities, policies and regulations fixed to political jurisdictions. You can read more about cartography and choropleth maps and other thematic map types in this paper <a href="https://www.mdpi.com/2220-9964/7/12/482/pdf">Challenges of mapping sustainable development goals indicators data</a>.
 
 Choropleths are common in popular media because they are easy to make, and general audiences are relatively more familiar with them. This improves consistency in their interpretation. However, choropleth maps have several limitations requiring unique design solutions. 
@@ -49,14 +48,13 @@ Make sure you have the following software installed (or have access to it) befor
 2. Excel (or Google Sheets), 
 3. Esri Online (optional - access to Esri Online is required for this step) 
 
-## Overview of the steps to take: 
+## Overview of the steps to take: <a href="https://video.uu.nl/permalink/v1261a0b17174w9bp3jj/iframe/">Video: About this assignment</a>
 
-- [ ] Create a directory on your local machine to keep all of these files
-- [ ] Open the globe data (SHP file) you downloaded here from GitHub in QGIS
-- [ ] Find and download SDG data
-- [ ] Clean the data in Excel
-- [ ] Join your CSV with SHP files
-- [ ] Categorize the data to make the map 
+- [ ] Create a directory on your local machine to keep all of these files video 1: 
+- [ ] Open the globe data (SHP file) you downloaded See <a href="https://video.uu.nl/permalink/v1261a0b1e6f8si7itsn/iframe/#start=11">Video GitHub + QGIS</a>
+- [ ] Find and download SDG data <a href="https://video.uu.nl/permalink/v1261a0c0697bifcu6m6/iframe/">Video to find and dowload SHP file, open in QGIS</a>
+- [ ] Clean the data in Excel and Join your CSV with SHP files <a href="https://video.uu.nl/permalink/v1261a0b20da3cxp681l/iframe/#start=67">Video - but you can skip this if you followed the other tutorial linked above - this way is harder and requires more cleaning then shared here</a>
+- [ ] Categorize the data to make the map <a href="https://video.uu.nl/permalink/v1261a0c06c8bm2m1ftn/">Video Choropleth Map Symbology</a>
 - [ ] Export as a JPG for a static map
 - [ ] Put your map online to make an interactive map using Esri Online
 
