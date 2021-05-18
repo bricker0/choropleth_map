@@ -57,7 +57,7 @@ Make sure you have the following software installed (or have access to it) befor
 - [ ] Categorize the data to make the map <a href="https://video.uu.nl/permalink/v1261a0c06c8bm2m1ftn/">Video Choropleth Map Symbology</a>
 - [ ] Change the classes and symbology <a href="https://video.uu.nl/permalink/v1261a0c0726ftjbuu4h/">Video to change classes here</a>
 - [ ] Export as a JPG for a static map <a href="https://video.uu.nl/permalink/v1261a0c076beo6p73r4/">Video to use layout manager</a> including how to add title and legend.
-- [ ] Put your map online to make an interactive map using Esri Online
+- [ ] Put your map online to make an interactive map using Esri Online <a href="https://video.uu.nl/permalink/v1261a0c09470hp5c6c5/">Video from QGIS to Esri online</a>
 
 # Create a directory
 
@@ -258,7 +258,7 @@ Once you are happy with your map, you can print it. You can now generate a stati
 
 In short, first center your map how you would like to see it printed. Then click Project-->New Print Layout
 
-<a href="https://video.uu.nl/permalink/v1261a0c076beo6p73r4/">Video whoing you how to use layout manager</a> including how to add title and legend.
+<a href="https://video.uu.nl/permalink/v1261a0c076beo6p73r4/">Video shoing you how to use layout manager</a> including how to add title and legend.
 
 In the next window click the small icon on the left that looks like a piece of paper with a small green plus and that when you hover over it, it says "Add new map to layout" then make the box as big as you would like the map to be printed in the frame (fill the frame!).
 
@@ -271,6 +271,8 @@ Once you are happy with all of your labels, click the PDF icon and export the im
 
 
 # Make your ONLINE map - only for UU students
+
+<a href="https://video.uu.nl/permalink/v1261a0c09470hp5c6c5/">Video showing the next set of steps from QGIS to Esri online</a>
 
 Before we get started with making your online map, zip your shapefile. Zip all the documents with the name of your shapefile into one compressed file. Or, save it as a KML file. This will need to be uploaded online. 
 
