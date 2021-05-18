@@ -56,7 +56,7 @@ Make sure you have the following software installed (or have access to it) befor
 - [ ] Clean the data in Excel and Join your CSV with SHP files <a href="https://video.uu.nl/permalink/v1261a0b20da3cxp681l/iframe/#start=67">Video - but you can skip this if you followed the other tutorial linked above </a> - this way is harder and requires more cleaning then shared here.
 - [ ] Categorize the data to make the map <a href="https://video.uu.nl/permalink/v1261a0c06c8bm2m1ftn/">Video Choropleth Map Symbology</a>
 - [ ] Change the classes and symbology <a href="https://video.uu.nl/permalink/v1261a0c0726ftjbuu4h/">Video to change classes here</a>
-- [ ] Export as a JPG for a static map
+- [ ] Export as a JPG for a static map <a href="https://video.uu.nl/permalink/v1261a0c076beo6p73r4/">Video to use layout manager</a> including how to add title and legend.
 - [ ] Put your map online to make an interactive map using Esri Online
 
 # Create a directory
@@ -257,6 +257,8 @@ You may get an error here – QGIS is buggy – switch a parameter and try again
 Once you are happy with your map, you can print it. You can now generate a static map and export as a PDF.  Make sure to include a legend!! <a href="https://docs.qgis.org/3.4/en/docs/training_manual/map_composer/map_composer.html">Read about how to print your map here.</a>
 
 In short, first center your map how you would like to see it printed. Then click Project-->New Print Layout
+
+<a href="https://video.uu.nl/permalink/v1261a0c076beo6p73r4/">Video whoing you how to use layout manager</a> including how to add title and legend.
 
 In the next window click the small icon on the left that looks like a piece of paper with a small green plus and that when you hover over it, it says "Add new map to layout" then make the box as big as you would like the map to be printed in the frame (fill the frame!).
 
