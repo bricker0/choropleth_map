@@ -53,8 +53,9 @@ Make sure you have the following software installed (or have access to it) befor
 - [ ] Create a directory on your local machine to keep all of these files video 1: 
 - [ ] Open the globe data (SHP file) you downloaded See <a href="https://video.uu.nl/permalink/v1261a0b1e6f8si7itsn/iframe/#start=11">Video GitHub + QGIS</a>
 - [ ] Find and download SDG data <a href="https://video.uu.nl/permalink/v1261a0c0697bifcu6m6/iframe/">Video to find and dowload SHP file, open in QGIS</a>
-- [ ] Clean the data in Excel and Join your CSV with SHP files <a href="https://video.uu.nl/permalink/v1261a0b20da3cxp681l/iframe/#start=67">Video - but you can skip this if you followed the other tutorial linked above - this way is harder and requires more cleaning then shared here</a>
+- [ ] Clean the data in Excel and Join your CSV with SHP files <a href="https://video.uu.nl/permalink/v1261a0b20da3cxp681l/iframe/#start=67">Video - but you can skip this if you followed the other tutorial linked above </a> - this way is harder and requires more cleaning then shared here.
 - [ ] Categorize the data to make the map <a href="https://video.uu.nl/permalink/v1261a0c06c8bm2m1ftn/">Video Choropleth Map Symbology</a>
+- [ ] Change the classes and symbology <a href="https://video.uu.nl/permalink/v1261a0c0726ftjbuu4h/">Video to change classes here</a>
 - [ ] Export as a JPG for a static map
 - [ ] Put your map online to make an interactive map using Esri Online
 
