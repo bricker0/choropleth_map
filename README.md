@@ -362,12 +362,18 @@ All of the tutorial videos that are mentioned and linked below <a href="https://
 2. <a href="https://video.uu.nl/permalink/v1261a0b17174w9bp3jj/iframe/">ABout this assignment</a>
 3. <a href="https://video.uu.nl/permalink/v1261a0b1e6f8si7itsn/">Open QGIS and the world shapefile</a>
 4. Here is a quick to show you how to <a href="https://video.uu.nl/permalink/v1261a0b1eeb034kkvxu/"> search, download, and clean data in Excel.</a>
+5. <a href="https://video.uu.nl/permalink/v1261a0b1e6f8si7itsn/">Join your CSV with SHP files</a>
+6. <a href="https://video.uu.nl/permalink/v1261a0b1e6f8si7itsn/">Categorize the data to make the maps</a>
 
 
 
 
 
 
+- [ ] 
+- [ ]  
+- [ ] Export as a JPG for a static map
+- [ ] Put your map online to make an interactive map using Esri Online
 
 
 
