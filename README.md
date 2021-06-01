@@ -161,7 +161,7 @@ The directions I provide are in English - so the first step might be to switch t
 
 # Download the shapefile and open it QGIS
 
-If you have not done so already, download the shapefile I provide for you <a href="https://github.com/bricker0/choropleth_map/tree/master/data/global_boundaries_50">here</a>. Save them locally on your computer in  a place you will remember. 
+If you have not done so already, download the shapefile I provide for you <a href="https://github.com/bricker0/choropleth_map/tree/master/data/world">here</a>. Save them locally on your computer in  a place you will remember. If you already downloaded the entire directory - the world shapefile can be found in the subdirectory "Data"-->"World"
 
 
 # Open QGIS 
