@@ -206,7 +206,9 @@ Right-click the world file in the TOC-->Export-->Save Feature As-->Then save as 
 
 To fix this, save as a KML file instead of SHP. 
 
-Open the KML file using a text editor - I like to use Sublime Text Editor, you can use whatever you have on your comptuer. Open the file - In the Shema name - find the attribute name and change the type from "string" to "real". Once you have made this change, save and close the file. 
+## Open your new KML file in a text editor
+
+Open the KML file using a text editor - I like to use Sublime Text Editor, you can use whatever you have on your computer- Notepad for example. Open the file - find the attribute name and change the type from "string" to "real". Once you have made this change, save and close the file. 
 ![Image of New QGIS document](https://github.com/bricker0/choropleth_map/blob/master/images/Picture5.png) 
 
 Now open the new updated KLM file in QGIS and export as shapefile and keep going.
