@@ -277,7 +277,13 @@ Once you are happy with all of your labels, click the PDF icon and export the im
 ![Image of printed map](https://github.com/bricker0/choropleth_map/blob/master/images/demo.png) 
 
 
-# Make your ONLINE map - only for UU students
+# Make an ONLINE map two compare two different datasets
+
+Here are some examples. This one uses story map to build a <a href="https://arcg.is/1ju1fW">slider app to compare the modifable aerial unit</a>. 
+
+This example uses another method but the functionality is similar. https://uni-utrecht.maps.arcgis.com/apps/Compare/index.html?appid=b0f4d8c7d2214f85b897668c3c414a3f
+
+the first steps are to get your data from QGIS to Esri online.
 
 <a href="https://video.uu.nl/permalink/v1261a0c09470hp5c6c5/">Video showing the next set of steps from QGIS to Esri online</a>
 
@@ -287,12 +293,14 @@ I will be showing you how to make a slider app using Esri online. Pro tip: If yo
 
 As a UU student, you have a free ESRI account. The ESRI license you have access to as a student is insanely expensive. We may as well enjoy it while you have it!
 
-#Esri Online Web App
+# Esri Online Web App
 
-Here you will make an Esri online web app so that the online map user can slide between your two maps, or use a "spyglass" to compare maps or another interface you wish. 
+Here you will make an Esri online web app so that the online map user can slide between two maps or two different years. You can choose a comparision template, for example use a "spyglass" to compare maps or another interface you wish. 
 
 There are a few steps to this. 
-First, you have to add your content to Esri online. (with your online account you have a folder with all of your content)
+
+First, you have to add your data into the content section of your Esri online account.
+
 Second, you have to create a web map. This is where you style your map, pick which attribute values you want the end-user to see when they click on the map, etc.
 
 Third, you pick the web app template you would like. 
