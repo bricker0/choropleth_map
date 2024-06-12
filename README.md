@@ -57,7 +57,7 @@ Make sure you have the following software installed (or have access to it) befor
 - [ ] Create a directory on your local machine to keep all of these files
 - [ ] Open the globe data (SHP file) you downloaded See <a href="https://video.uu.nl/permalink/v1261a0b1e6f8si7itsn/iframe/#start=11">Video GitHub + QGIS</a>
 - [ ] Find and download SDG data from <a href="https://unstats-undesa.opendata.arcgis.com/">the UN STATS Open SDG Data Hub site.</a>
-- [ ] Open both SHP files in QGIS.
+- [ ] Open both SHP files and join them in QGIS <a href="https://video.uu.nl/permalink/v1268a27e9d9818cnqe1/">See How to do this step in this Video </a>
 - [ ] Optional: Normalize your SDG data in QGIS. 
 - [ ] Change the map projection.
 - [ ] Categorize the data to make the map <a href="https://video.uu.nl/permalink/v1261a0c06c8bm2m1ftn/">Video Choropleth Map Symbology</a>
@@ -116,6 +116,8 @@ In the next window click the green plus sign in the bottom left corner. Use the 
 
 Also make sure you check the box that says “Custom Field Name Prefix” and then name it something short – each column you join will get this prefix. For example, for SDG 1.1.1 I give those columns the prefix pov because it represents poverty rates.
 
+<a href="https://video.uu.nl/permalink/v1268a27e9d9818cnqe1/">Here is a video of showing how to do these steps </a>
+
 
 ![Image of New QGIS document](https://github.com/bricker0/choropleth_map/blob/master/images/Picture4.png)
 
@@ -143,7 +145,7 @@ Now open the new updated KLM file in QGIS and export as shapefile and keep going
 
 # Make your choropleth map
 
-Use the properties window to change the following (letter relate to figure below)
+Use the properties window to change the following (letter related to figure below)
 
 a. select attribute 
 b. color ramp
@@ -160,7 +162,6 @@ Next select the legend format - (b) color ramp - You may use this <a href="https
 
 (c)how many decimals. I would say zero decimals. Decimal is labeled as a "precision" number. It is a dropdown menu. 
  
-
 Then select the (d) type of  (remember basic statistics - here is a <a href="https://www.axismaps.com/guide/data/data-classification/">great overview related to choropleth maps</a>) you would like to apply to your data (remember this heavily influences the message - you may come back and reclassify a few times until you get the picture you are trying to communicate). 
 
 
@@ -171,6 +172,10 @@ Select the (e) number of classes (no more than 5! People can not interpret more 
 (f) You can double-click the color swatches to change them, double-click the class labels in the Legend to change them, and double-click on the class values themselves to change them. 
 
 ![Image of New QGIS Classifying Symbology](https://github.com/bricker0/choropleth_map/blob/master/images/Picture33.png) 
+
+# Optional: Normalize your SDG data in QGIS. 
+
+You need to use "field calculator" in QGIS to normalize your data if you are working with raw counts. 
 
 # Change the projection
 
