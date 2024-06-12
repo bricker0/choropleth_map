@@ -1,28 +1,27 @@
 # Mapping for a Sustainable World 
 
-In this tutorial, you will learn how to make a choropleth map using United Nations Sustainable Development Goal (SDG) indicator data and QGIS.
-Complementary to this tutorial is the open access, free to download book, a called <a href="https://www.un.org/geospatial/sites/www.un.org.geospatial/files/MappingforaSustainableWorld20210124.pdf"> UN publication called: Mapping for a Sustainable World</a> which covers cartographic principles as they relate to mapping the SDGs. Throughout this tutorial, I will mention different sections of this book. I highly recommend reading Front Matter and section 1 of this book before you get started. 
+In this tutorial, you will learn how to make a choropleth map using the United Nations Sustainable Development Goal (SDG) indicator data and QGIS.
+Complementary to this tutorial is the open access, free-to-download book, called <a href="https://www.un.org/geospatial/sites/www.un.org.geospatial/files/MappingforaSustainableWorld20210124.pdf"> UN publication called: Mapping for a Sustainable World</a> which covers cartographic principles as they relate to mapping the SDGs. Throughout this tutorial, I will mention different sections of this book. I highly recommend reading Front Matter and section 1 of this book before you get started. 
 More about this book can be viewed here https://youtu.be/f2szsFB-pfU 
 All of the tutorial videos that are mentioned and linked below <a href="https://video.uu.nl/channels/global-integration-project/"> can be found here.</a>
 
-A more detailed tutorial can be found here https://github.com/uwcartlab/MappingSDGsTechnicalSupplement
+Another similar tutorial can be found here https://github.com/uwcartlab/MappingSDGsTechnicalSupplement
 
-# choropleth_map
+This presentation was developed for students in the <a href="https://www.uu.nl/bachelors/en/global-sustainability-science">Global Sustainability Science Bachelors at Utrecht University.</a> However, everyone is welcome to follow along. I will walk you through the process to find SDG indicator data, clean it a bit, and then join it to a country boundary shapefile, then make two choropleth maps to be printed or/and digital format so that you can compare the two in a web application. 
 
-Read section 3.3 of the Mapping for a Sustainable World book to learn more about Choropleth maps. 
+# What is a Choropleth map?
 
-A choropleth map is a thematic map that uses color to represent a specific value and then fill a geographic area (in this case countries). For example, a map of the world where each country is colored based on the % of people living under the poverty line – which is associated with SDG indicator 3.6.1 (See figure below). Choropleth maps represent quantitatively, enumerated, and normalized data (meaning data that is based on a specific scale) and rely on the visual variable color value (or shade or saturation of a single color) to create an inherent order from light-to-dark colors or from dark-to-light colors. Choropleth maps may also use color hue (specific shade of a color) and color saturation in multi-colored schemes and all diverging schemes. 
+A choropleth map is a thematic map that uses color to represent a specific value and then fill a geographic area (in this case countries). For example, a map of the world where each country is colored based on the % of people living under the poverty line – which is associated with SDG indicator 3.6.1 (See figure below). Choropleth maps represent quantitatively, enumerated, and normalized data (meaning data that is based on a specific scale - for example: number of trees per sq/km) and rely on the visual variable color value (or shade or saturation of a single color) to create an inherent order from light-to-dark colors or dark-to-light colors. Choropleth maps may also use color hue (specific shade of a color) and color saturation in multi-colored schemes and all diverging schemes. 
 
-Here is an example of a choropleth map made using 
-and explained in this tutorial. 
+Here is an example of a choropleth map made using and explained in this tutorial. 
 
 ![Image of printed map](https://github.com/bricker0/choropleth_map/blob/master/images/demo1.png) 
 
-This presentation was developed for students in the <a href="https://www.uu.nl/bachelors/en/global-sustainability-science">Global Sustainability Science Bachelors at Utrecht University.</a> However, everyone is welcome to follow along. I will walk you through the process to find SDG indicator data, join it to a country boundary shapefile to then make two choropleth maps to be printed or/and digital format so that you can compare the two in a web application. 
+Read section 3.3 of the Mapping for a Sustainable World book to learn  about Choropleth maps.
 
 Here is my example using ArcGIS Online Web App to compare two different SDG indicator datasets https://arcg.is/15HSDv 
 
-Choropleth maps commonly are used by national statistic agencies or other authoritative bodies that numbered data within sets of political boundaries. Choropleth is often the default thematic technique for the SDG indicators. It is important to remember that these maps evoke a visual metaphor of continuous (it happens everywhere) and abrupt (it stops at the border) phenomena and, therefore, work best for mapping governmental activities, policies and regulations fixed to political jurisdictions. You can read more about cartography and choropleth maps and other thematic map types in this paper <a href="https://www.mdpi.com/2220-9964/7/12/482/pdf">Challenges of mapping sustainable development goals indicators data</a>.
+Choropleth maps are commonly used by national statistic agencies or other authoritative bodies that numbered data within sets of political boundaries. Choropleth is often the default thematic technique for the SDG indicators. It is important to remember that these maps evoke a visual metaphor of continuous (it happens everywhere) and abrupt (it stops at the border) phenomena and, therefore, work best for mapping governmental activities, policies and regulations fixed to political jurisdictions. You can read more about cartography and choropleth maps and other thematic map types in this paper <a href="https://www.mdpi.com/2220-9964/7/12/482/pdf">Challenges of mapping sustainable development goals indicators data</a>.
 
 Choropleths are common in popular media because they are easy to make, and general audiences are relatively more familiar with them. This improves consistency in their interpretation. However, choropleth maps have several limitations requiring unique design solutions. 
 
