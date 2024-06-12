@@ -211,25 +211,23 @@ Once you are happy with all of your labels, click the PDF icon and export the im
 ![Image of printed map](https://github.com/bricker0/choropleth_map/blob/master/images/demo.png) 
 
 
-# Make an ONLINE map two compare two different datasets
+# Make an ONLINE map to compare two different datasets
 
-Here are some examples. This one uses story map to build a <a href="https://arcg.is/1ju1fW">slider app to compare the modifable aerial unit</a>. 
+Here are some examples. This one uses a story map to build a <a href="https://arcg.is/1ju1fW">slider app to compare the modifiable aerial unit</a>. 
 
 This example uses another method but the functionality is similar. https://uni-utrecht.maps.arcgis.com/apps/Compare/index.html?appid=b0f4d8c7d2214f85b897668c3c414a3f
 
-the first steps are to get your data from QGIS to Esri online.
+the first steps are to get your data you cleaned and manipulated in QGIS to Esri online.
 
 <a href="https://video.uu.nl/permalink/v1261a0c09470hp5c6c5/">Video showing the next set of steps from QGIS to Esri online</a>
 
 Before we get started with making your online map, zip your shapefile. Zip all the documents with the name of your shapefile into one compressed file. Or, save it as a KML file. This will need to be uploaded online. 
 
-I will be showing you how to make a slider app using Esri online. Pro tip: If you have server space and would like to use a different API that is fine. You can host the map files on Esri online - generate a REST service to be used in a different mapping API.
-
 As a UU student, you have a free ESRI account. The ESRI license you have access to as a student is insanely expensive. We may as well enjoy it while you have it!
 
 # Esri Online Web App
 
-Here you will make an Esri online web app so that the online map user can slide between two maps or two different years. You can choose a comparision template, for example use a "spyglass" to compare maps or another interface you wish. 
+Here you will make an Esri online web app so that the online map user can slide between two maps or two different years. You can choose a comparison template, for example, use a "spyglass" to compare maps or another interface you wish. 
 
 There are a few steps to this. 
 
@@ -257,8 +255,6 @@ Next click "Open in Map Viewer". At the time of writing (May 2020) You will see 
 If you do not click open in map viewer from the data page for your content - you can also open a new "My Map" and open it here. In a new map window, click the Add Button. Since you have already uploaded your file, you can click Search for layers, the first layer should be the data you just uploaded. Add it to your map by clicking the + symbol. Again, it will not be styled, we will do that now. 
 
 I will give you the basics. <a href="https://doc.arcgis.com/en/arcgis-online/create-maps/change-style.htm"> More information about changing the style of your map can be found here.</a>
-
-
 
 Now, click on the icon in the top left that looks like a piece of paper with writing on it. This will show you what layers you have loaded in your map and give you the opportunity to do an analysis or style the data here.
 
@@ -318,15 +314,7 @@ All of the tutorial videos that are mentioned and linked below <a href="https://
 
 
 
-
-
-
-- [ ] 
-- [ ]  
-- [ ] Export as a JPG for a static map
-- [ ] Put your map online to make an interactive map using Esri Online
-
-
+#Hungry for even more reading? 
 
 You may read more about the challenges of mapping the sustainable development goals in the papers listed below. 
 
