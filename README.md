@@ -179,9 +179,13 @@ You need to use "field calculator" in QGIS to normalize your data if you are wor
 
 # Change the projection
 
-For now – keep EPSG: 4326 WSG 84 – this is so you can use it online later -even though we know Mercator is *not* optimal for global scale choropleth maps. 
+Note - when you use this map in the Esri Online part of this assignment – keep EPSG: 4326 WSG 84 – this is so you can use it online later - while we know Mercator is *not* optimal for global scale choropleth maps. 
 
-For printing to PDF - change the projection to something like Mollewide or another equal-area projection. <a href="
+For printing to PDF - change the projection to something like Eckart IV (as recommended by the book Mapping for a Sustainble World) Mollewide or another equal-area projection. 
+
+To do this - <a href="https://youtu.be/OmPH1es1w1k?si=ItAhBpMZPpuLZQem">video demo here</a>
+
+<a href="
 https://gip-itc-universitytwente.github.io/globe-spinner/
 ">Check out some options here. </a>
 
