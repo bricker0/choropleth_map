@@ -23,25 +23,25 @@ Here is my example using ArcGIS Online Web App to compare two different SDG indi
 
 Choropleths are common in popular media because they are easy to make they are familiar. This improves consistency in their interpretation. Choropleth is often the default thematic technique for SDG indicators since SDG indicator data offer a single numerical value for the entire country. It is important to remember that these maps evoke a visual metaphor of continuous (it happens everywhere) and abrupt (it stops at the border) phenomena and, therefore, work best for mapping governmental activities, policies, and regulations fixed to political jurisdictions. However, any SDG indicator can be mapped in a choropleth map. You can read more about cartography and choropleth maps and other thematic map types in this paper <a href="https://www.mdpi.com/2220-9964/7/12/482/pdf">Challenges of mapping sustainable development goals indicators data</a>.
 
-
 However, choropleth maps have several limitations requiring unique design solutions. They suffer from the modifiable areal unit problem (MAUP) meaning the map looks different based on what area data are aggregated. <a href="https://uni-utrecht.maps.arcgis.com/apps/StorytellingSwipe/index.html?appid=7ce210f065214b55b4a9c458cdd8ff41">Read more and see an example of the MAUP here</a>. Section 1.8 of the Mapping for a Sustainable World book covers the MAUP. Choropleth maps arguably suffer from MAUP more than other thematic maps because the color symbolization is applied to the entire polygon rather than using additional symbols atop or across the polygon (as with proportional symbols, dot density, and isoline maps). 
 
 This is why absolute frequencies must be normalized into relative attributes on choropleth maps to ensure comparability across enumeration units of different sizes and shapes. For example, suppose you have seen any COVID-19 maps with total values of cases for each country. In that case, this is misleading because population and land area vary dramatically across the world and across a single country. For example Canada, is a huge land area with a small population. 
 
-
 Many SDG indicators are already rates – meaning they have been normalized, so this makes them easy to use to create choropleth maps. Choropleth maps also require an equal-area projection to preserve the relative amounts of colors across the map. These are some ideas and rules to be aware of as you make your choropleth map. You can read more about projections in section 2.4 of the book <a href="https://www.un.org/geospatial/sites/www.un.org.geospatial/files/MappingforaSustainableWorld20210124.pdf"> mapping for a sustainable world. "...finding a balanced and equitable representation for all countries depicted in the map." (p 31) </a>
-
 
 # The United Nations Sustainable Development Goals (SDGs)
 
 The <a href="https://sustainabledevelopment.un.org/?menu=1300">SDGs</a> are a set of 17 ambitious goals established collectively by members of the UN. In an ambitious diplomatic feat, a set of 17 ambitious goal established collectively by members of the UN. These goals range from combating poverty to cleaning the oceans, protecting the environment, and ensuring human rights. To reach these goals, a set of targets have been made and to measure how close or far each country is to each goal a set of indicators or datasets have been established. 
 Each country is responsible for collecting its own SDG indicator data. They are then invited to share it with the United Nations which makes that data publicly available. 
 
-Here you can download a full list of the SDG targets and indicators https://unstats.un.org/sdgs/indicators/indicators-list/
-And here you can download the values https://unstats.un.org/sdgs/dataportal
-These data are difficult to clean to then map using this tutorial. For this reason, it is recommended that you download data from the UN SDG data hub https://unstats-undesa.opendata.arcgis.com/
+# About QGIS
 
+QGIS is an open-source software. Meaning it is free to download and use, and free to modify the code. 
 
+QGIS is relatively easy to use but I will not go over every detail here. If you find my directions difficult to follow, I recommend reading additional resources on your own. <a href="https://docs.qgis.org/2.2/en/docs/gentle_gis_introduction/">Here is a great tutorial about QGIS starting with navigating the interface</a>. There are even resources available in Dutch. 
+
+The directions I provide are in English - so the first step might be to switch the language of the QGIS interface from Dutch to English.
+<a href="https://video.uu.nl/permalink/v12619b44a56c4i15u9p/iframe/" allowfullscreen="allowfullscreen" allow="autoplay">Here is a two minute video tutorial on how to change the language of the User Interface.</a>
 
 # 1. Getting started
 
@@ -57,7 +57,8 @@ Make sure you have the following software installed (or have access to it) befor
 - [ ] Create a directory on your local machine to keep all of these files
 - [ ] Open the globe data (SHP file) you downloaded See <a href="https://video.uu.nl/permalink/v1261a0b1e6f8si7itsn/iframe/#start=11">Video GitHub + QGIS</a>
 - [ ] Find and download SDG data from <a href="https://unstats-undesa.opendata.arcgis.com/">the UN STATS Open SDG Data Hub site.</a>
-- [ ] Open both SHP files in QGIS. 
+- [ ] Open both SHP files in QGIS.
+- [ ] Optional: Normalize your SDG data in QGIS. 
 - [ ] Change the map projection.
 - [ ] Categorize the data to make the map <a href="https://video.uu.nl/permalink/v1261a0c06c8bm2m1ftn/">Video Choropleth Map Symbology</a>
 - [ ] Change the classes and symbology <a href="https://video.uu.nl/permalink/v1261a0c0726ftjbuu4h/">Video to change classes here</a>
@@ -68,7 +69,7 @@ Make sure you have the following software installed (or have access to it) befor
 
 ## 2.2. Create a directory
 
-First, create a directory locally on your machine. That means create a new folder and put everything associated with your assignment in that folder. Go ahead and download all the data from this GitHub directory and put it in your local directory. (note the ds files are generated by mac computers and you don't need them for anything.) Please work from a local directory - on your own machine. Be sure to unzip any zipped file. <a href="https://video.uu.nl/permalink/v1261a0b182a5kgd31i8/">Here is a short video tutorial about what this looks like in practice, good data management strategies in GIS.</a> 
+First, create a directory locally on your machine. That means creating a new folder and put everything associated with your assignment in that folder. Go ahead and download all the data from this GitHub directory and put it in your local directory. (note the ds files are generated by mac computers and you don't need them for anything.) Please work from a local directory - on your own machine. Be sure to unzip any zipped file. <a href="https://video.uu.nl/permalink/v1261a0b182a5kgd31i8/">Here is a short video tutorial about what this looks like in practice, good data management strategies in GIS.</a> 
 
 ## 2.3 Open data in QGIS
 
@@ -81,91 +82,14 @@ Read through all of the different indicators for each of the Goals. Find SDG ind
 
 You may read through the entire list of SDG indicators as a <a href="https://unstats.un.org/sdgs/indicators/indicators-list/"> PDF or excel file found here </a>
 
+Search the complete list. When you have decided on a dataset (make sure it is normalized – a rate or  % of the population or % of total landmass for example) otherwise you may download it later in QGIS.
+
 I recommend that you download indicator data <a href="https://unstats-undesa.opendata.arcgis.com/">here since it is already in the shp format</a>, and if you download data here you will not need to clean your data in Excel. Some (but not all) of the indicators can be downloaded here as Shapefiles. Note - the lat long values are country centroids, no political boundaries can be downloaded from this source. You will still need to join this file to the file I provided. The data shared in this tutorial does not reflect the UN opinion on any boundary disputes. Point data look like this. (see new project icon circled in red). 
 ![Image of New QGIS document](https://github.com/bricker0/choropleth_map/blob/master/images/point.png)
 
+You may pick one or two datasets to compare for this assignment. Download and review each before you go further in this assignment. What can you compare? Do they have enough data for the same year? You do not want to compare data from one indicator for the year 1990 and the other indicator with data from 2010. See what you can compare before you do the rest of this work
 
-You may Pick two (or 3 if you are ambitious) datasets to compare for this assignment. Download and review each before you go further in this assignment. What can you compare? Do they have enough data for the same year? You do not want to compare data from one indicator for the year 1990 and the other indicator with data from 2010. See what you can compare before you do the rest of this work.
-
-Note: When I looked at my two datasets I noticed that the poverty indicator 1.1.1 is missing a lot of data in different years, the most complete is "latest year" This makes it difficult to compare years. I would recommend being strategic - you might have to clean/join data again. Bring in all years of data to keep your options open later.  
-
-Search the complete list, including metadata. When you have decided on a dataset (make sure it is normalized – a rate or  % of the population or % of total landmass for example) to map Download the official data here 
-https://unstats.un.org/sdgs/indicators/database/
-
-These data will need to be joined to a shape file .shp file names "world.shp" that is provided for you and you have already opened. 
-
-Note: When you download data here from UN STATS– sometimes you will also get the regional data – these will need to be deleted later. The shapefile I provide for you does not include regional political boundaries so these rows will cause problems during the join process. For example, SDG indicator 1.1.1 "Southern Africa" and several other regions are included. For this exercise, we only want country names and ISO3 codes (ISO3 is a uniform 3 letter code for each country - not all indicators have this). The region rows need to be deleted. The shapefile I provide you with here does not have any region names to join these regions to in QGIS which will cause trouble later. In this dataset, each year has a different row instead of columns with different years. After I deleted the regions, I organized all the data by date and deleted the dates I don't want. For my example, I will be comparing the poverty rate and deaths from traffic in the year 2000 and 2016.
-
-
-For this example, I first picked indicator 3.6.1 and  (remember - each group will have to do pick two datasets. Meaning each group will go through this with their own data. I will go through this twice)…
-
-## SDG #3 Ensure healthy lives and promote well-being for all at all ages
-
-TARGET 3.6  By 2020, halve the number of global deaths and injuries from road traffic accidents
-INDICATOR 3.6.1  Death rate due to road traffic injuries
-Death rate due to road traffic injuries (per 100,000 population)
-
-and Indicator 1.1.1 
-
-I downloaded these data. I first need to explore the data then clean it. 
-
-Clean the data in Excel (or Google Sheets)
-
-
-Open the data in Excel. First, let’s see what is included in the dataset so we can think about what can be mapped. Every dataset will be formatted a bit differently. This is because different agencies within the UN are responsible for collecting and curating each indicator dataset. You can read more about each individual indicator data curation practice in its metadata (metadata are data about data).  
-
-We want to make our dataset as small as possible. Delete all of the data except what you will use in your map. For me, I will build a map and I know at the very minimum I will need to have the indicator number, title, data for different years, name of each country. You can quickly see below what I can delete.  
-
-![Image of excelsheet](https://github.com/bricker0/choropleth_map/blob/master/images/Picture1.png)
-
-In this dataset, I notice there are different sheets of data, so that means the data are organized in different ways within the same excel file. There are also metadata in one of the sheets. 
-
-After you have decided what to map based on what data are available, you may delete everything you don’t need. This is called cleaning the data. We delete everything else because it will slow down the computer processing, it will make it harder to find the data we do want to include in our map, it just makes everything faster and easier down the line. 
-
-Things I will delete. The columns stating the Goal and the Target, keep the indicator row (which includes the Goal number and target in it anyway). ALWAYS KEEP ISO3 code - whenever possible use this to join your data with the country file in QGIS. 
-
-I am also deleting the SeriesCode, the GeoAreaCode, Nature, Reporting. I am definitely NOT deleting the country name – called the GeoAreaName because I will use that to join these data with the map data. I am not deleting the Series Description because I might need that in the interactive map (we will make in the final step), or to generate a legend, or simply to remember what the data represent. For the same reason I am not deleting Units, also I don’t want to forget the units these data are in for future reference. 
-
-You can see my <a href="https://github.com/bricker0/choropleth_map/blob/master/data/Traffic_Death_Rate.xlsx">original dataset here </a>
-You can see my lighter, <a href="https://github.com/bricker0/choropleth_map/blob/master/data/Min_Traffic_Death_Rate.xlsx">cleaner dataset here</a>.
-
-## ** Perks of data cleaning - You are the canary in the Coal Mine while critical thinking
-
-When you critically think about the data, when you are going through it cleaning it, you will see things that most people don't. Think about how these data were collected in each country. Who reported it to who to get to the UN? In each of these countries. What data for which country is missing? Why do you think that is? What do you think about this data that you are going through? Are there more appropriate data to be collected to reach the SDG you are studying? 
-
-## now back to data cleaning 
-
-Finally, I will now save it as a comma-separated values file CSV file. This will make life easier later. I do this in Excel by clicking File-->Save As-->Min_Traffic_Death_Rate.csv I had to use the dropdown to change the file format. 
-
-Make sure to toggle "no geometry" otherwise you will get an error related to geometry definition.
-
-Remember  what you save your file names and where you save them in case you need them later. In theory - you will only need your CSV now.  
-
-I will be using this<a href="https://github.com/bricker0/choropleth_map/blob/master/data/Min_Traffic_Death_Rate.csv">CSV dataset here</a>.
-
-So far we have completed the following: 
-- [X] Create a directory on your local machine to keep all of these files
-- [X] Find and download SDG data
-- [X] Clean the data in Excel
-We still need to: 
-- [ ] Open data in QGIS and join with CSV with SHP files
-- [ ] Categorize the data to make the map 
-- [ ] Export as a JPG for a static map
-- [ ] Put your map online to make an interactive map using Esri Online
-
-
-# About QGIS
-
-QGIS is an open source software. Meaning it is free to download and use, and free to modify the code. 
-
-QGIS is relatively easy to use but I will not go over every detail here. If you find my directions difficult to follow, I recommend reading additional resources on your own. <a href="https://docs.qgis.org/2.2/en/docs/gentle_gis_introduction/">Here is a great tutorial about QGIS starting with navigating the interface</a>. There are even resources available in Dutch. 
-
-The directions I provide are in English - so the first step might be to switch the language of the QGIS interface from Dutch to English.
-<a href="https://video.uu.nl/permalink/v12619b44a56c4i15u9p/iframe/" allowfullscreen="allowfullscreen" allow="autoplay">Here is a two minute video tutorial on how to change the language of the User Interface.</a>
-
-# Download the shapefile and open it QGIS
-
-If you have not done so already, download the shapefile I provide for you <a href="https://github.com/bricker0/choropleth_map/tree/master/data/world">here</a>. Save them locally on your computer in  a place you will remember. If you already downloaded the entire directory - the world shapefile can be found in the subdirectory "Data"-->"World"
+Note: Every dataset is different!
 
 
 # Open QGIS 
@@ -180,13 +104,11 @@ First, add data to your project. Open the file called "world" and specifically a
 It should look like this (see the new project icon circled in red). 
 ![Image of New QGIS document](https://github.com/bricker0/choropleth_map/blob/master/images/Picture3.png)
 
-<a href="https://www.qgistutorials.com/en/docs/3/importing_spreadsheets_csv.html">Tutorial about how to import and open a CSV file in QGIS</a>.
+If you downloaded a CSV file from the UN STATS website and NOT the Data Hub here is a <a href="https://www.qgistutorials.com/en/docs/3/importing_spreadsheets_csv.html">Tutorial about how to import and open a CSV file in QGIS</a>.
 
-Next, add your indicator CSV file. Follow the same directions you did before but this time select the "Delimited Text" option rather than Vector like you did in the last step. Navigate to your cleaned indicator dataset and click add. Or, if you downloaded a shapefile with the centroids, select vector again since it is a vector file.
+You should now have two different layers or files loaded, their names should be seen in the Table of Contents (TOC) pane. Let's open the attribute tables of both files and have a look around to find out what the two have in common so that they can be joined. 
 
-You should now have two different layers or files loaded, their names should be seen in the Table of Contents (TOC) pane. Let's open the attributes of both files and have a look around to find out what the two have in common so that they can then be joined. 
-
-For me – it is ROMNAM in the World file and GeoAreaName in my indicator dataset. Several of the indicators have a ISO3 code - this is the best one to use if it is available. 
+Several of the indicators have a ISO3 code - this is the best one to use if it is available. 
 
 Join the data. In the TOC right click on the world layer and select properties, then select join. Identify the attributes that match for you to join the two files. 
 
