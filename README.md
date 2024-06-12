@@ -53,15 +53,15 @@ In short, the <a href="https://sustainabledevelopment.un.org/?menu=1300">SDGs</a
 
 Make sure you have the following software installed (or have access to it) before you get started:
 1. Open Source desktop GIS called <a href= "https://qgis.org/en/site/">QGIS</a> (it runs on Mac or PC), (Short video with directions on how to <a href="https://video.uu.nl/permalink/v12619b44a56c4i15u9p/">change the QGIS language settings can be found here</a>.
-2. Excel (or Google Sheets), 
-3. Esri Online (optional - access to Esri Online is required for this step) 
+2. Optional Excel (or Google Sheets - this step is needed if you use the UN STATS data to download the indicator data), 
+3. Esri Online (access to Esri Online is required for this step) 
 
 ## 1.2 Overview of the steps to take: <a href="https://video.uu.nl/permalink/v1261a0b17174w9bp3jj/iframe/">Video: About this assignment</a>
 
-- [ ] Create a directory on your local machine to keep all of these files video 1: 
+- [ ] Create a directory on your local machine to keep all of these files
 - [ ] Open the globe data (SHP file) you downloaded See <a href="https://video.uu.nl/permalink/v1261a0b1e6f8si7itsn/iframe/#start=11">Video GitHub + QGIS</a>
-- [ ] Find and download SDG data <a href="https://video.uu.nl/permalink/v1261a0c0697bifcu6m6/iframe/">Video to find and dowload SHP file, open in QGIS</a>
-- [ ] Clean the data in Excel and Join your CSV with SHP files <a href="https://video.uu.nl/permalink/v1261a0b20da3cxp681l/iframe/#start=67">Video - but you can skip this if you followed the other tutorial linked above </a> - this way is harder and requires more cleaning then shared here.
+- [ ] Find and download SDG data from UN STATS site <a href="https://video.uu.nl/permalink/v1261a0c0697bifcu6m6/iframe/">Video to find and download SHP file, open in QGIS</a>
+- [ ] Open the data in Excel and Join your CSV with SHP files <a href="https://video.uu.nl/permalink/v1261a0b20da3cxp681l/iframe/#start=67">Video - but you can skip this if you followed the other tutorial linked above </a> - this way is harder and requires more cleaning then shared here.
 - [ ] Categorize the data to make the map <a href="https://video.uu.nl/permalink/v1261a0c06c8bm2m1ftn/">Video Choropleth Map Symbology</a>
 - [ ] Change the classes and symbology <a href="https://video.uu.nl/permalink/v1261a0c0726ftjbuu4h/">Video to change classes here</a>
 - [ ] Export as a JPG for a static map <a href="https://video.uu.nl/permalink/v1261a0c076beo6p73r4/">Video to use layout manager</a> including how to add title and legend.
