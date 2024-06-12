@@ -11,9 +11,11 @@ This presentation was developed for students in the <a href="https://www.uu.nl/b
 
 # What is a Choropleth map?
 
-A choropleth map is a thematic map that uses color to represent a specific value and then fill a geographic area (in this case countries). For example, a map of the world where each country is colored based on the % of people living under the poverty line – which is associated with SDG indicator 3.6.1 (See figure below). Choropleth maps represent quantitatively, enumerated, and normalized data (meaning data that is based on a specific scale - for example: number of trees per sq/km) and rely on the visual variable color value (or shade or saturation of a single color) to create an inherent order from light-to-dark colors or dark-to-light colors. Choropleth maps may also use color hue (specific shade of a color) and color saturation in multi-colored schemes and all diverging schemes. 
+A choropleth map is a thematic map that uses color to represent a specific value and then fill a geographic area (in this case countries). For example, the below shows the rates of people who experience road traffic injuries per 100,00 people which is SDG indicator 3.6.1 (See figure below). 
 
-Here is an example of a choropleth map made using and explained in this tutorial. 
+Choropleth maps represent quantitatively, enumerated, and normalized data (meaning data that is based on a specific scale - for example: number of trees per sq/km) and rely on the visual variable color value (or shade or saturation of a single color) to create visual order from light-to-dark colors or dark-to-light colors. Choropleth maps may also use color hue (specific shade of a color) and color saturation in multi-colored schemes or diverging schemes. The best color scheme should be selected to suit the communication goals of the map, to represent the phenomena, and to guide the intended audience's eyes to the main idea of the map. 
+Here is an example of a choropleth map made based on this tutorial.
+
 
 ![Image of printed map](https://github.com/bricker0/choropleth_map/blob/master/images/demo1.png) 
 
