@@ -119,20 +119,22 @@ Also make sure you check the box that says “Custom Field Name Prefix” and th
 
 ![Image of New QGIS document](https://github.com/bricker0/choropleth_map/blob/master/images/Picture4.png)
 
-*******In this step I notice I still have more fields than I will use to generate or style my map – go back and open your csv file in Excel again and only save the fields I want in the csv. This step is optional. 
+Great! If this worked, save this new shapefile that has the joined data. Right click your shapefile and click export. Save with a new name that you will remember.
+
+## Trouble shooting
+******In this step I notice I still have more fields than I will use to generate or style my map – go back and open your csv file in Excel again and only save the fields I want in the csv. This step is optional. 
 
 Once you have joined the data, open the attribute table and make sure the data have been joined. 
 
-Then see which countries have null values or no data. This means either there is no data for those countries, or it means the join didn’t work. This is sometimes the case if country names do not match between the two sources. You might have to go back and do more data cleaning. In the case of my dataset that I picked; the usual suspects are missing – several small island states. 
+Then see which countries have null values or no data. This means either there is no data for those countries, or it means the join didn’t work. This is sometimes the case if country names do not match between the two sources. You might have to go back and do more data cleaning. In the case of the dataset that I picked; the usual suspects are missing –Greenland,  several small island states. 
 
 
-Great! If this worked, save this new shapefile that have the joined data. 
 
 Right-click the world file in the TOC-->Export-->Save Feature As-->Then save as a shapefile. Here you will notice you can see the type of field each attribute is, string (words) int (numbers). Note: make sure your joined data field are integers or real numbers (fload, int, double are all fine), otherwise you will not be able to make a choropleth map with them. If they are, you are fine and move on to the next section. If they are not...let's fix that quickly. If the type stays string, QGIS will not let you create a choropleth map with that attribute field. 
 
 To fix this, save as a KML file instead of SHP. 
 
-## Open your new KML file in a text editor
+Open your new KML file in a text editor
 
 Open the KML file using a text editor - I like to use Sublime Text Editor, you can use whatever you have on your computer- Notepad for example. Open the file - find the attribute name and change the type from "string" to "real". Once you have made this change, save and close the file. 
 ![Image of New QGIS document](https://github.com/bricker0/choropleth_map/blob/master/images/Picture5.png) 
