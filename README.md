@@ -26,7 +26,7 @@ Here is my example using ArcGIS Online Web App to compare two different SDG indi
 Choropleths are common in popular media because they are easy to make they are familiar. This improves consistency in their interpretation. Choropleth is often the default thematic technique for SDG indicators since SDG indicator data offer a single numerical value for the entire country. It is important to remember that these maps evoke a visual metaphor of continuous (it happens everywhere) and abrupt (it stops at the border) phenomena and, therefore, work best for mapping governmental activities, policies, and regulations fixed to political jurisdictions. However, any SDG indicator can be mapped in a choropleth map. You can read more about cartography and choropleth maps and other thematic map types in this paper <a href="https://www.mdpi.com/2220-9964/7/12/482/pdf">Challenges of mapping sustainable development goals indicators data</a>.
 
 
-However, choropleth maps have several limitations requiring unique design solutions. They suffer from the modifiable areal unit problem (MAUP) meaning the map looks different based on what area data are aggregated. <a href="https://uni-utrecht.maps.arcgis.com/apps/StorytellingSwipe/index.html?appid=7ce210f065214b55b4a9c458cdd8ff41">Read more and see an example of the MAUP here</a>. Section 1.8 of the Mapping for a Sustainable World book covers the MAUP. Choropleth maps arguably suffer from MAUP more than other thematic maps because the color symbolization is applied to the entire polygon itself rather than using additional symbols atop or across the polygon (as with proportional symbols, dot density, and isoline maps). 
+However, choropleth maps have several limitations requiring unique design solutions. They suffer from the modifiable areal unit problem (MAUP) meaning the map looks different based on what area data are aggregated. <a href="https://uni-utrecht.maps.arcgis.com/apps/StorytellingSwipe/index.html?appid=7ce210f065214b55b4a9c458cdd8ff41">Read more and see an example of the MAUP here</a>. Section 1.8 of the Mapping for a Sustainable World book covers the MAUP. Choropleth maps arguably suffer from MAUP more than other thematic maps because the color symbolization is applied to the entire polygon rather than using additional symbols atop or across the polygon (as with proportional symbols, dot density, and isoline maps). 
 
 This is why absolute frequencies must be normalized into relative attributes on choropleth maps to ensure comparability across enumeration units of different sizes and shapes. For example, suppose you have seen any COVID-19 maps with total values of cases for each country. In that case, this is misleading because population and land area vary dramatically across the world and across a single country. For example Canada, is a huge land area with a small population. 
 
@@ -36,15 +36,13 @@ Many SDG indicators are already rates – meaning they have been normalized, so 
 
 # The United Nations Sustainable Development Goals (SDGs)
 
-In short, the <a href="https://sustainabledevelopment.un.org/?menu=1300">SDGs</a> are a set of 17 ambitious goal established collectively by members of the UN. These goals range from combating poverty to cleaning up the oceans, protecting the environment, and ensuring human rights. These goals To reach these goals, a set of targets have been identified. To see how close or far each country is to each goal a set of indicators or datasets have been established. Please read more about this on your own. Or read my papers and book chapters about the challenges and considerations of mapping the SDGs. Links to further reading below.
+The <a href="https://sustainabledevelopment.un.org/?menu=1300">SDGs</a> are a set of 17 ambitious goals established collectively by members of the UN. In an ambitious diplomatic feat, a set of 17 ambitious goal established collectively by members of the UN. These goals range from combating poverty to cleaning the oceans, protecting the environment, and ensuring human rights. To reach these goals, a set of targets have been made and to measure how close or far each country is to each goal a set of indicators or datasets have been established. 
+Each country is responsible for collecting its own SDG indicator data. They are then invited to share it with the United Nations which makes that data publicly available. 
 
-<a href="https://bit.ly/2Shw1FF">The Power of different visualization choices</a> 
+Here you can download a full list of the SDG targets and indicators https://unstats.un.org/sdgs/indicators/indicators-list/
+And here you can download the values https://unstats.un.org/sdgs/dataportal
+These data are difficult to clean to then map using this tutorial. For this reason, it is recommended that you download data from the UN SDG data hub https://unstats-undesa.opendata.arcgis.com/
 
-<a href="https://www.mdpi.com/2220-9964/7/12/482/pdf">Challenges of mapping sustainable development goals indicators data</a> 
-
-<a href="https://www.tandfonline.com/doi/pdf/10.1080/17445647.2020.1736194">Topographic and thematic (in) visibility of Small Island Developing States in a world map</a>
-
-<a href="https://onlinelibrary.wiley.com/doi/pdf/10.1111/cag.12575">Feminist cartography and the United Nations Sustainable Development Goal on gender equality: Emotional responses to three thematic maps</a>
 
 
 # 1. Getting started
@@ -275,7 +273,7 @@ In short, first center your map how you would like to see it printed. Then click
 
 In the next window click the small icon on the left that looks like a piece of paper with a small green plus and that when you hover over it, it says "Add new map to layout" then make the box as big as you would like the map to be printed in the frame (fill the frame!).
 
-Next, click the small icon that has 3 boxes (yellow, red, blue) and a small green plus that when you hover over it says "Add new legend to the layout" This will generate a legend. Change the labels using the window pane to the right. Make sure the labels will make sense to the map reader. Then add a title to your map. Think about posting this map on social media - will your friends be able to figure out what is going on? Are all data labeled in the legend along with data type ( what are the units of measure represented on your map? Is it a proportion of the population? rate? something else? this needs to be in the legend and maybe even the title!)
+Next, click the small icon that has 3 boxes (yellow, red, blue) and a small green plus that when you hover over it says "Add new legend to the layout" This will generate a legend. Change the labels using the window pane to the right. Make sure the labels will make sense to the map reader. Then add a title to your map. Think about posting this map on social media - will your friends be able to figure out what is going on? Are all data labeled in the legend along with data type ( what are the units of measure represented on your map? Is it a proportion of the population? rate? something else? This needs to be in the legend and maybe even the title!)
 
 Once you are happy with all of your labels, click the PDF icon and export the image. If you don't like it, keep working on it. I am happy with my labels, but I might reclassify my data. There are a number of other problems too. 1. in the legend a few values are present in more than one class - 11 is in the middle two classes, same for 21. Make sure you fix this in your legend, reminder, go to properties -->symbology and double click the legend to change values.
 
@@ -399,5 +397,15 @@ All of the tutorial videos that are mentioned and linked below <a href="https://
 - [ ] Put your map online to make an interactive map using Esri Online
 
 
+
+You may read more about the challenges of mapping the sustainable development goals in the papers listed below. 
+
+<a href="https://bit.ly/2Shw1FF">The Power of different visualization choices</a> 
+
+<a href="https://www.mdpi.com/2220-9964/7/12/482/pdf">Challenges of mapping sustainable development goals indicators data</a> 
+
+<a href="https://www.tandfonline.com/doi/pdf/10.1080/17445647.2020.1736194">Topographic and thematic (in) visibility of Small Island Developing States in a world map</a>
+
+<a href="https://onlinelibrary.wiley.com/doi/pdf/10.1111/cag.12575">Feminist cartography and the United Nations Sustainable Development Goal on gender equality: Emotional responses to three thematic maps</a>
 
 
