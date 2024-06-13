@@ -229,7 +229,7 @@ As a UU student, you have a free ESRI account. The ESRI license you have access 
 
 Here you will make an Esri online web app so that the online map user can slide between two maps or two different years. You can choose a comparison template, for example, use a "spyglass" to compare maps or another interface you wish. 
 
-There are a few steps to this. 
+There are a few steps to this. (I give you the basic steps - but if you want to learn more about how to use Esri online - check out this tutorial by Esri https://www.esri.com/training/catalog/5d816c0255cf937306d2d3ef/arcgis-online-basics/ )
 
 First, you have to add your data into the content section of your Esri online account.
 
