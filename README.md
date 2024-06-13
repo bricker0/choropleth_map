@@ -43,7 +43,7 @@ QGIS is relatively easy to use but I will not go over every detail here. If you 
 The directions I provide are in English - so the first step might be to switch the language of the QGIS interface from Dutch to English.
 <a href="https://video.uu.nl/permalink/v12619b44a56c4i15u9p/iframe/" allowfullscreen="allowfullscreen" allow="autoplay">Here is a two minute video tutorial on how to change the language of the User Interface.</a>
 
-# 1. Getting started
+# 1. Overview
 
 ## 1.1 Software required
 
@@ -55,7 +55,7 @@ Make sure you have the following software installed (or have access to it) befor
 ## 1.2 Overview of the steps to take: <a href="https://video.uu.nl/permalink/v1261a0b17174w9bp3jj/iframe/">Video: About this assignment</a>
 
 - [ ] Create a directory on your local machine to keep all of these files
-- [ ] Open the globe data (SHP file) you downloaded See <a href="https://video.uu.nl/permalink/v1261a0b1e6f8si7itsn/iframe/#start=11">Video GitHub + QGIS</a>
+- [ ] Open the world data (SHP file) you downloaded See <a href="https://video.uu.nl/permalink/v1261a0b1e6f8si7itsn/iframe/#start=11">Video GitHub + QGIS</a>
 - [ ] Find and download SDG data from <a href="https://unstats-undesa.opendata.arcgis.com/">the UN STATS Open SDG Data Hub site.</a>
 - [ ] Open both SHP files and join them in QGIS <a href="https://video.uu.nl/permalink/v1268a27e9d9818cnqe1/">See How to do this step in this Video </a>
 - [ ] Optional: Normalize your SDG data in QGIS. 
@@ -89,7 +89,7 @@ I recommend that you download indicator data <a href="https://unstats-undesa.ope
 
 You may pick one or two datasets to compare for this assignment. Download and review each before you go further in this assignment. What can you compare? Do they have enough data for the same year? You do not want to compare data from one indicator for the year 1990 and the other indicator with data from 2010. See what you can compare before you do the rest of this work
 
-Note: Every dataset is different!
+Note: Every SDG indicator dataset is different!
 
 
 # Open QGIS 
