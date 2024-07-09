@@ -1,7 +1,7 @@
 # Mapping for a Sustainable World 
 
 In this tutorial, you will learn how to make a choropleth map using the United Nations Sustainable Development Goal (SDG) indicator data and QGIS.
-Complementary to this tutorial is the open access, free-to-download book, called <a href="https://www.un.org/geospatial/sites/www.un.org.geospatial/files/MappingforaSustainableWorld20210124.pdf"> UN publication called: Mapping for a Sustainable World</a> which covers cartographic principles as they relate to mapping the SDGs. Throughout this tutorial, I will mention different sections of this book. I highly recommend reading Front Matter and section 1 of this book before you get started. 
+Complementary to this tutorial is the open access, free-to-download book, called <a href="https://www.un.org/geospatial/sites/www.un.org.geospatial/files/MappingforaSustainableWorld20210124.pdf"> UN publication called: Mapping for a Sustainable World</a> which covers cartographic principles as they relate to mapping the SDGs. Throughout this tutorial, I will mention different sections of this book. I highly recommend reading Front Matter and Section 1 of this book before you get started. 
 More about this book can be viewed here https://youtu.be/f2szsFB-pfU 
 All of the tutorial videos that are mentioned and linked below <a href="https://video.uu.nl/channels/global-integration-project/"> can be found here.</a>
 
@@ -11,7 +11,7 @@ This presentation was developed for students in the <a href="https://www.uu.nl/b
 
 A choropleth map is a thematic map that uses color to represent a specific value and then fill a geographic area (in this case countries). For example, the below shows the rates of people who experience road traffic injuries per 100,00 people which is SDG indicator 3.6.1 (See figure below). 
 
-Choropleth maps represent quantitatively, enumerated, and normalized data (meaning data that is based on a specific scale - for example: number of trees per sq/km) and rely on the visual variable color value (or shade or saturation of a single color) to create visual order from light-to-dark colors or dark-to-light colors. Choropleth maps may also use color hue (specific shade of a color) and color saturation in multi-colored schemes or diverging schemes. The best color scheme should be selected to suit the communication goals of the map, to represent the phenomena, and to guide the intended audience's eyes to the main idea of the map. 
+Choropleth maps represent quantitatively, enumerated, and normalized data (meaning data that is based on a specific scale - for example: the number of trees per sq/km) and rely on the visual variable color value (or shade or saturation of a single color) to create visual order from light-to-dark colors or dark-to-light colors. Choropleth maps may also use color hue (specific shade of a color) and color saturation in multi-colored schemes or diverging schemes. The best color scheme should be selected to suit the communication goals of the map, to represent the phenomena, and to guide the intended audience's eyes to the main idea of the map. 
 Here is an example of a choropleth map made based on this tutorial.
 
 
@@ -25,7 +25,7 @@ Choropleths are common in popular media because they are easy to make they are f
 
 However, choropleth maps have several limitations requiring unique design solutions. They suffer from the modifiable areal unit problem (MAUP) meaning the map looks different based on what area data are aggregated. <a href="https://uni-utrecht.maps.arcgis.com/apps/StorytellingSwipe/index.html?appid=7ce210f065214b55b4a9c458cdd8ff41">Read more and see an example of the MAUP here</a>. Section 1.8 of the Mapping for a Sustainable World book covers the MAUP. Choropleth maps arguably suffer from MAUP more than other thematic maps because the color symbolization is applied to the entire polygon rather than using additional symbols atop or across the polygon (as with proportional symbols, dot density, and isoline maps). 
 
-This is why absolute frequencies must be normalized into relative attributes on choropleth maps to ensure comparability across enumeration units of different sizes and shapes. For example, suppose you have seen any COVID-19 maps with total values of cases for each country. In that case, this is misleading because population and land area vary dramatically across the world and across a single country. For example Canada, is a huge land area with a small population. 
+This is why absolute frequencies must be normalized into relative attributes on choropleth maps to ensure comparability across enumeration units of different sizes and shapes. For example, suppose you have seen any COVID-19 maps with total values of cases for each country. In that case, this is misleading because population and land area vary dramatically across the world and across a single country. For example Canada is a huge land area with a small population. 
 
 Many SDG indicators are already rates – meaning they have been normalized, so this makes them easy to use to create choropleth maps. Choropleth maps also require an equal-area projection to preserve the relative amounts of colors across the map. These are some ideas and rules to be aware of as you make your choropleth map. You can read more about projections in section 2.4 of the book <a href="https://www.un.org/geospatial/sites/www.un.org.geospatial/files/MappingforaSustainableWorld20210124.pdf"> mapping for a sustainable world. "...finding a balanced and equitable representation for all countries depicted in the map." (p 31) </a>
 
@@ -63,7 +63,7 @@ Make sure you have the following software installed (or have access to it) befor
 - [ ] Categorize the data to make the map <a href="https://video.uu.nl/permalink/v1261a0c06c8bm2m1ftn/">Video Choropleth Map Symbology</a>
 - [ ] Change the classes and symbology <a href="https://video.uu.nl/permalink/v1261a0c0726ftjbuu4h/">Video to change classes here</a>
 - [ ] Export as a JPG for a static map <a href="https://video.uu.nl/permalink/v1261a0c076beo6p73r4/">Video to use layout manager</a> including how to add title and legend.
-- [ ] Put your map online to make an interactive map using Esri Online <a href="https://video.uu.nl/permalink/v1261a0c09470hp5c6c5/">Video from QGIS to Esri online</a>
+
 
 # 2 Get started
 
@@ -78,7 +78,7 @@ Shp files (we call these shape files) can be opened in QGIS –shapefiles are co
 
 ## 2.4 Find and download the data from the UN
 
-Read through all of the different indicators for each of the Goals. Find SDG indicator data which one has Tier 1 or at least Tier 2 data that are proportional data. 
+Read through all of the different indicators for each of the Goals. Find SDG indicator data that has Tier 1 or at least Tier 2 data that are proportional data. 
 
 You may read through the entire list of SDG indicators as a <a href="https://unstats.un.org/sdgs/indicators/indicators-list/"> PDF or excel file found here </a>
 
@@ -108,9 +108,9 @@ If you downloaded a CSV file from the UN STATS website and NOT the Data Hub here
 
 You should now have two different layers or files loaded, their names should be seen in the Table of Contents (TOC) pane. Let's open the attribute tables of both files and have a look around to find out what the two have in common so that they can be joined. 
 
-Several of the indicators have a ISO3 code - this is the best one to use if it is available. 
+Several of the indicators have an ISO3 code - this is the best one to use if it is available. 
 
-Join the data. In the TOC right click on the world layer and select properties, then select join. Identify the attributes that match for you to join the two files. 
+Join the data. In the TOC  right-click on the world layer and select properties, then select join. Identify the attributes that match for you to join the two files. 
 
 In the next window click the green plus sign in the bottom left corner. Use the dropdown menus to identify the file and attribute field to join. (later if you want to remove the join you created – you can always push the red subtract symbol). 
 
@@ -152,15 +152,15 @@ b. color ramp
 c. number of decimal places
 d. type of classification 
 e. number of classes
-f. Change class values, labels, specific color swatches
+f. Change class values, labels, and specific color swatches
 
 First, right-click the world shapefile that has your new attributes attached - whatever you named it. Then click properties-->Symbology
 
 In this new window in the top dropdown box change from a single value to "graduated" in the next box labeled value, (a)select the attribute for which you wish to represent in your map. 
 
-Next select the legend format - (b) color ramp - You may use this <a href="https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3">color selecting tool to help</a> you figure out the best color scheme for your map.
+Next, select the legend format - (b) color ramp - You may use this <a href="https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3">color selecting tool to help</a> you figure out the best color scheme for your map.
 
-(c)how many decimals. I would say zero decimals. Decimal is labeled as a "precision" number. It is a dropdown menu. 
+(c)how many decimals? I recommend zero decimals. Decimal is labeled as a "precision" number. It is a dropdown menu. 
  
 Then select the (d) type of  (remember basic statistics - here is a <a href="https://www.axismaps.com/guide/data/data-classification/">great overview related to choropleth maps</a>) you would like to apply to your data (remember this heavily influences the message - you may come back and reclassify a few times until you get the picture you are trying to communicate). 
 
@@ -169,7 +169,7 @@ Select the (e) number of classes (no more than 5! People can not interpret more 
 
 <a href="https://docs.qgis.org/2.8/en/docs/training_manual/vector_classification/classification.html">More about data classification in QGIS can be found here. </a>
 
-(f) You can double-click the color swatches to change them, double-click the class labels in the Legend to change them, and double-click on the class values themselves to change them. 
+(f) You can double-click the color swatches to change them, double-click on the class values in the legend to change them. 
 
 ![Image of New QGIS Classifying Symbology](https://github.com/bricker0/choropleth_map/blob/master/images/Picture33.png) 
 
@@ -181,7 +181,7 @@ You need to use "field calculator" in QGIS to normalize your data if you are wor
 
 Note - when you use this map in the Esri Online part of this assignment – keep EPSG: 4326 WSG 84 – this is so you can use it online later - while we know Mercator is *not* optimal for global scale choropleth maps. 
 
-For printing to PDF - change the projection to something like Eckart IV (as recommended by the book Mapping for a Sustainble World) Mollewide or another equal-area projection. 
+For printing to PDF - change the projection to something like Eckart IV (as recommended by the book Mapping for a Sustainable World) Mollewide or another equal-area projection. 
 
 To do this - <a href="https://youtu.be/OmPH1es1w1k?si=ItAhBpMZPpuLZQem">video demo here</a>
 
@@ -201,105 +201,19 @@ In short, first center your map how you would like to see it printed. Then click
 
 <a href="https://video.uu.nl/permalink/v1261a0c076beo6p73r4/">Video shoing you how to use layout manager</a> including how to add title and legend.
 
-In the next window click the small icon on the left that looks like a piece of paper with a small green plus and that when you hover over it, it says "Add new map to layout" then make the box as big as you would like the map to be printed in the frame (fill the frame!).
+In the next window click the small icon on the left that looks like a piece of paper with a small green plus and when you hover over it, it says "Add new map to layout" Then make the box as big as you would like the map to be printed in the frame (fill the frame!).
 
-Next, click the small icon that has 3 boxes (yellow, red, blue) and a small green plus that when you hover over it says "Add new legend to the layout" This will generate a legend. Change the labels using the window pane to the right. Make sure the labels will make sense to the map reader. Then add a title to your map. Think about posting this map on social media - will your friends be able to figure out what is going on? Are all data labeled in the legend along with data type ( what are the units of measure represented on your map? Is it a proportion of the population? rate? something else? This needs to be in the legend and maybe even the title!)
+Next, click the small icon that has 3 boxes (yellow, red, blue) and a small green plus that when you hover over it says "Add new legend to the layout" This will generate a legend. Change the labels using the window pane to the right. Make sure the labels will make sense to the map reader. Then add a title to your map. Think about posting this map on social media - will your friends be able to figure out what is going on? Are all data labeled in the legend along with the data type ( what are the units of measure represented on your map? Is it a proportion of the population? rate? or something else? This needs to be in the legend and maybe even the title!)
 
-Once you are happy with all of your labels, click the PDF icon and export the image. If you don't like it, keep working on it. I am happy with my labels, but I might reclassify my data. There are a number of other problems too. 1. in the legend a few values are present in more than one class - 11 is in the middle two classes, same for 21. Make sure you fix this in your legend, reminder, go to properties -->symbology and double click the legend to change values.
+Once you are happy with all of your labels, click the PDF icon and export the image. If you don't like it, keep working on it. I am happy with my labels, but I might reclassify my data. There are several other problems too. 1. In the legend a few values are present in more than one class - 11 is in the middle two classes, same for 21. Make sure you fix this in your legend, reminder, go to properties -->symbology and double click the legend to change values.
 
 
 ![Image of printed map](https://github.com/bricker0/choropleth_map/blob/master/images/demo.png) 
 
 
-# Make an ONLINE map to compare two different datasets
+I have shared an examples of maps online using ArcGIS Online here: 
 
-Here are some examples. This one uses a story map to build a <a href="https://arcg.is/1ju1fW">slider app to compare the modifiable aerial unit</a>. 
-
-This example uses another method but the functionality is similar. https://uni-utrecht.maps.arcgis.com/apps/Compare/index.html?appid=b0f4d8c7d2214f85b897668c3c414a3f
-
-the first steps are to get your data you cleaned and manipulated in QGIS to Esri online.
-
-<a href="https://video.uu.nl/permalink/v1261a0c09470hp5c6c5/">Video showing the next set of steps from QGIS to Esri online</a>
-
-Before we get started with making your online map, zip your shapefile. Zip all the documents with the name of your shapefile into one compressed file. Or, save it as a KML file. This will need to be uploaded online. 
-
-As a UU student, you have a free ESRI account. The ESRI license you have access to as a student is insanely expensive. We may as well enjoy it while you have it!
-
-# Esri Online Web App
-
-Here you will make an Esri online web app so that the online map user can slide between two maps or two different years. You can choose a comparison template, for example, use a "spyglass" to compare maps or another interface you wish. 
-
-There are a few steps to this. (I give you the basic steps - but if you want to learn more about how to use Esri online - check out this tutorial by Esri https://www.esri.com/training/catalog/5d816c0255cf937306d2d3ef/arcgis-online-basics/ )
-
-First, you have to add your data into the content section of your Esri online account.
-
-Second, you have to create a web map. This is where you style your map, pick which attribute values you want the end-user to see when they click on the map, etc.
-
-Third, you pick the web app template you would like. 
-
-When you are done, in your content folder, you will see your file, your web map, and your web app. It is important you name them appropriately so you can keep track of them. Also, you must make sure the sharing settings are set appropriately. You need to set them to anyone within your organization who can see them (at least) or you can set them for everyone in the world to be able to see them (if you want to share on social media). 
-
-
-<a href="https://www.arcgis.com/sharing/rest/oauth2/authorize?client_id=arcgisonline&display=default&response_type=token&state=%7B%22useLandingPage%22%3Atrue%7D&expiration=20160&locale=en&redirect_uri=https%3A%2F%2Fwww.arcgis.com%2Fhome%2Faccountswitcher-callback.html&force_login=true&hideCancel=true&showSignupOption=true&canHandleCrossOrgSignIn=true&signuptype=esri">Click here to sign into Esri online</a>. Sign in to the Enterprise account by first typing uni-utrecht. Then use your solis id to log in. 
-
-Once you are logged in, in the top menu bar, click "Content". On the next page click "Add Item"-->click from your computer. Navigate to the zipped shapefile you created. Make sure you select the matching file format in the contents dropdown box. Make sure Publish this file as a hosted layer is toggled. Add the tag SDG and the SDG indicator value and any other keywords you find appropriate. 
-
-Once the file is uploaded, it will take you to a page about the dataset you have uploaded. Here you can manage the settings. Click "Sharing" and then select either Organization or Everyone(otherwise only you will see it). Then click save. 
-
-While you do not need this now - you will also see on this page there are conversion tools. 
-
-Do the same for your other datasets.
-
-Next click "Open in Map Viewer". At the time of writing (May 2020) You will see a stable version and a beta version of this product. You can pick either one, although it is always safer to not pick the beta version.) If you decide to use the beta viewer - it is self explanatory how to use it. This (beta or normal) will open your shapefile in Esri online map viewer. Your data will not be styled with the style you worked so hard on in QGIS. You will have to do it again here.
-
-If you do not click open in map viewer from the data page for your content - you can also open a new "My Map" and open it here. In a new map window, click the Add Button. Since you have already uploaded your file, you can click Search for layers, the first layer should be the data you just uploaded. Add it to your map by clicking the + symbol. Again, it will not be styled, we will do that now. 
-
-I will give you the basics. <a href="https://doc.arcgis.com/en/arcgis-online/create-maps/change-style.htm"> More information about changing the style of your map can be found here.</a>
-
-Now, click on the icon in the top left that looks like a piece of paper with writing on it. This will show you what layers you have loaded in your map and give you the opportunity to do an analysis or style the data here.
-
-![ArcGIS Online Style](https://github.com/bricker0/choropleth_map/blob/master/images/Picture7.png) 
-
-When you click the icon that looks like little shapes, on the layer you added,  this will give you options to style your map. (You will likely do this step several times until you get it just right!)
-
-1. you need to select the attribute you wish to show on your map, the attribute I will be showing is called "Traff 2016" and represents deaths caused by traffic per 100,000 people. This is a rate.  
-
-2. Then I select "Counts and Amounts" which makes it a Choropleth map. 
-
-Click options to adjust the classification or data ranges that correspond to each color. You may also change the color ramp here as well. 
-
-
-Again, you may use this <a href="https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3">color select tool to help</a> you figure out the best color scheme for your map.
-
-Read more about <a href="https://doc.arcgis.com/en/arcgis-online/create-maps/styling-reference.htm#ESRI_SECTION1_E3130A70037C45ED996CB6646ABC7330">how to classify data in ArcGIS Online.</a>
-
-3. Click done. 
-
-Then make sure you click "Save" at the top of the map and save as and name your map something you will not forget. (See figure above). 
-
-Now you will need to configure the "pop up." Make sure in the pop up there is only relevant information for your target audience. In my case, it is not all of the attribute information but only country name, which SDG indicator and how many accidents, and that the number is a rate.  <a href="https://doc.arcgis.com/en/arcgis-online/create-maps/configure-pop-ups.htm">More details about how to configure the pop up box can be found here</a>.
-
-In my example, I also added a bar graph to show the difference in rates between the year 2000 and 2016.
-
-![ArcGIS Configure popup box](https://github.com/bricker0/choropleth_map/blob/master/images/Picture8.png) 
-
-You may see that in your popup box, a map reader might not understand your attribute name - so they may not know what the number represents. To change your attribute names and in turn update the field name in the pop up - <a href="https://doc.arcgis.com/en/arcgis-online/manage-data/describe-fields.htm#ESRI_SECTION1_665863484B9E4001A25FDDD9A030235A">follow these directions.</a>
-
-Now, if you decide to map a swipe user interface to compare your data, you will need to make two separate web maps. If you want to make a spyglass user interface to compare your data, you can have one map with two layers. Or if you don't know yet, you can create 3 maps. 1. with both data sets. 2. with one data set 3. with the other dataset. Then you can decide later if you want a swipe or spyglass. Repeat the steps above to make these maps. 
-
-Once you are happy with the style of your web map, we will move on to building our "Configure Web"
-
-# Configure Web App to compare indicator data
-
-Navigate to your "Content" page. Then click the button in the top left that says "+Create" and then select "Configurable Apps" then in the left menu of the new window click "Compare Maps/Layers" and then click the option "Story Map Swipe and Spyglass". Then click "Create a web app" and fill in all the parameters in the text window. Then click "Done". 
-
-Next, select the map you just created. You may pick the vertical sliding bar or spyglass configuration. 
-
-Follow the directions provided. Continue to configure your map until you are happy with the app. Then make sure you toggle the sharing settings so that anyone on the web can see your work. 
-
-Here is what mine looks like https://arcg.is/15HSDv and this one https://uni-utrecht.maps.arcgis.com/apps/Compare/index.html?appid=b0f4d8c7d2214f85b897668c3c414a3f
-
-I can't wait to see yours!
+ https://arcg.is/15HSDv and this one https://uni-utrecht.maps.arcgis.com/apps/Compare/index.html?appid=b0f4d8c7d2214f85b897668c3c414a3f
 
 
 Summary of the videos: 
